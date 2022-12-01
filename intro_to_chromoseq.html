@@ -94,13 +94,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Select <code>Go</code> → <code>Connect to Server</code> from the menu bar (or press <code>⌘K</code>)</li>
 <li>Type <code>smb://pathfiles.wustl.edu/AMP/Genomics/ChromoSeq</code> into the <code>Server Address</code> box and click <code>Connect</code></li>
 </ul>
-<p>You will need both read and write access to the <code>batchdir</code> directory to template cases. If you do not have both, ask one of the fellows to help arrange access.</p>
-<p>Data from individual sequencing runs are stored in the <code>batchdir</code> directory and named by run date. Data from individual cases are stored in subfolders named by patient MRN, CoPath accession, and specimen type. There should be four files for each case:</p>
+<p>You will need both read and write access to the <code>batchdir/</code> directory to template cases. If you do not have both, ask one of the fellows to help arrange access.</p>
+<p>Data from individual sequencing runs are stored in the <code>batchdir/</code> directory and named by run date. Data from individual cases are stored in subfolders named by patient MRN, CoPath accession, and specimen type. There should be four files for each case:</p>
 <ul>
 <li><code>*genomwide.pdf</code>: genome-wide coverage plot applying all appropriate corrections; used to visually assess copy number alterations</li>
 <li><code>*genomeWideCorrection.pdf</code>: genome-wide coverage plots applying different subsets of corrections (or no correction); used to visually assess copy number alterations</li>
 <li><code>*chromoseq.txt</code>: human-readable summary of variants identified and quality control metrics; used as an alternative source of data also available via the <code>ChromReporter</code> tool</li>
-<li><code>*chromoseq.json</code>: machine-readable summary of variants identified, quality control metrics, and cases information; used by the <code>ChromReporter</code> tool to generate the clinical report</li>
+<li><code>*chromoseq.json</code>: machine-readable summary of variants identified, quality control metrics, and case information; used by the <code>ChromReporter</code> tool to generate the clinical report</li>
 <li><code>*haplotect.txt</code>: haplotect output; used to assess sample contamination and/or donor engraftment if clinically relevant</li>
 </ul>
 </section>
