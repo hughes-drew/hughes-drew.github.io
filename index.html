@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction to ChromoSeq</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="temp_files/libs/clipboard/clipboard.min.js"></script>
+<script src="temp_files/libs/quarto-html/quarto.js"></script>
+<script src="temp_files/libs/quarto-html/popper.min.js"></script>
+<script src="temp_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="temp_files/libs/quarto-html/anchor.min.js"></script>
+<link href="temp_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="temp_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="temp_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="temp_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="temp_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to ChromoSeq</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p><a href="https://pathologyservices.wustl.edu/services-tests/chromoseq/">ChromoSeq</a> is a whole-genome sequencing assay used to comprehensively identify multiple classes of clinically relevant genetic variation, including copy number alterations, structural variants, and gene mutations, in patients with myeloid malignancies (<a href="https://pubmed.ncbi.nlm.nih.gov/33704937/">PMID: 33704937</a>).</p>
+</section>
+<section id="worfklow" class="level3">
+<h3 class="anchored" data-anchor-id="worfklow">Worfklow</h3>
+<p>ChromoSeq sequencing runs are started on Friday, and output data are copied to the Department of Pathology server the following Sunday or Monday. There is a standing appointment for faculty sign out at 14:00 on Tuesday, which may be moved or canceled depending on faculty and data availability.</p>
+<p>Once data are available, for each case:</p>
+<ul>
+<li>Evaluate the overall quality of the data based on the genome-wide coverage plot (<code>*genomwide.pdf</code>), quality control metrics (<code>ChromoSeq QC</code>), and haplotect output</li>
+<li>Review the patient history in detail (diagnostic and treatment history, prior molecular and cytogenetic testing results, corresponding morphological case, corresponding cytogenetic and molecular testing results, etc.)</li>
+<li>Fill in structured data fields using the <code>ChromReporter</code> tool</li>
+<li>Update the set of variants included in the clinical report based on orthogonal clinical data, patient history, and variant quality</li>
+<li>Provide a concise summary of key findings and an overall assessment of the case</li>
+<li>Save the updated data as a JSON and overwrite the existing JSON</li>
+<li>Review the case with sign out faculty</li>
+<li>Revise the case and notify faculty that it is ready for sign out</li>
+</ul>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The complete set of files for each case (including alignment files) are stored on the Research Infrastructure Services (RIS) cluster (<a href="https:\ris.wustl.edu">ris.wustl.edu</a>). The subset of files needed to interpret most cases are copied to the Department of Pathology server (pathfiles.wustl.edu).</p>
+<p>To access data on a Windows machine, use the File Explorer application:</p>
+<ul>
+<li>Right click on <code>This PC</code> and select <code>Map network drive...</code></li>
+<li>Type <code>\\pathfiles.wustl.edu/AMP/Genomics/ChromoSeq</code> into the <code>Folder</code> box and click <code>Finish</code></li>
+</ul>
+<p>To access data on a Mac, use the Finder application:</p>
+<ul>
+<li>Select <code>Go</code> → <code>Connect to Server</code> from the menu bar (or press <code>⌘K</code>)</li>
+<li>Type <code>smb://pathfiles.wustl.edu/AMP/Genomics/ChromoSeq</code> into the <code>Server Address</code> box and click <code>Connect</code></li>
+</ul>
+<p>You will need both read and write access to the <code>batchdir</code> directory to template cases. If you do not have both, ask one of the fellows to help arrange access.</p>
+<p>Data from individual sequencing runs are stored in the <code>batchdir</code> directory and named by run date. Data from individual cases are stored in subfolders named by patient MRN, CoPath accession, and specimen type. There should be four files for each case:</p>
+<ul>
+<li><code>*genomwide.pdf</code>: genome-wide coverage plot applying all appropriate corrections; used to visually assess copy number alterations</li>
+<li><code>*genomeWideCorrection.pdf</code>: genome-wide coverage plots applying different subsets of corrections (or no correction); used to visually assess copy number alterations</li>
+<li><code>*chromoseq.txt</code>: human-readable summary of variants identified and quality control metrics; used as an alternative source of data also available via the <code>ChromReporter</code> tool</li>
+<li><code>*chromoseq.json</code>: machine-readable summary of variants identified, quality control metrics, and cases information; used by the <code>ChromReporter</code> tool to generate the clinical report</li>
+<li><code>*haplotect.txt</code>: haplotect output; used to assess sample contamination and/or donor engraftment if clinically relevant</li>
+</ul>
+</section>
+<section id="reporting-tool" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h3>
+<p>The <code>ChromReporter</code> reporting tool is a JavaScript application developed and maintained by Ajay Khanna at the Mcdonnell Genome Institute. The application can be launched in a web browser (Chrome, Safari, etc.) by navigating to the <code>ChromoSeq/ChromReporter/</code> directory and clicking on the <code>index.html</code> file.</p>
+<p>The <code>ChromReporter</code> tool reads data from the <code>*chromoseq.json</code> files associated with each case. Clicking on <code>Choose File</code> and then selecting a JSON will bring up four tabs displaying the information stored for an individual case:</p>
+<ul>
+<li><code>Case Information</code>: contains structured fields to input case information and relevant clinical data as well as a comment field to provide a narrative interpretation for each case</li>
+<li><code>ChromoSeq Data</code>: displays variants called by the ChromoSeq analysis pipeline; allows users to promote or remove variants from the report based on review of the underlying sequencing data and correlation with orthogonal studies</li>
+<li><code>ChromoSeq QC</code>: displays case information and quality control metrics as formatted tables</li>
+<li><code>Raw Data</code>: displays the contents of the associated <code>*chromoseq.txt</code> file as plain text</li>
+</ul>
+<p>After selecting variants to report, entering structured data, and writing the case interpretation, clicking on <code>View PDF</code> generates a formatted PDF report for review. From this page, clicking <code>View JSON</code> generates a JSON file containing all of the case information, including user-entered data. To save your work/update a case in progress, save the JSON with the same name and in the same location as the original file.</p>
+<p>Note: the <code>Submit to CoPath</code> checkbox is <strong>only used by faculty</strong> when signing out cases. This box should never be checked by trainees templating cases.</p>
+</section>
+<section id="structured-data-fields" class="level3">
+<h3 class="anchored" data-anchor-id="structured-data-fields">Structured Data Fields</h3>
+<ul>
+<li><code>Ordering Physician</code>: attending physician first and last name as they appear on the associated Epic order</li>
+<li><code>Last Name</code>: patient last name as it appears in Epic</li>
+<li><code>First Name</code>: patient first name as it appears in Epic</li>
+<li><code>Middle Name</code>: patient middle name as it appears in Epic</li>
+<li><code>Corresponding Morphological Case</code>: CoPath accession for the corresponding bone marrow biopsy</li>
+<li><code>Blast Count (%)</code>: blast count (%) recorded in the differential count from the corresponding bone marrow biopsy</li>
+<li><code>WBC (K/cumm)</code>: white blood cell count (K/cumm) recorded in the complete blood count (CBC) from the corresponding bone marrow biopsy</li>
+<li><code>Hgb (g/dL)</code>: hemoglobin (g/dL) recorded in the complete blood count (CBC) from the corresponding bone marrow biopsy</li>
+<li><code>Plt (K/cumm)</code>: platelet count (K/cumm) recorded in the complete blood count (CBC) from the corresponding bone marrow biopsy</li>
+<li><code>Sign-out Pathologist</code>: Eric Duncavage or Molly Schroeder</li>
+<li><code>Stated Diagnosis</code>: AML, CML, MDS, MPN, MDS/MPN, or other</li>
+<li><code>Diagnosis timepoint</code>: new diagnosis, recurrence, or other</li>
+<li><code>Transplant</code>: allogeneic, autologous, or NA</li>
+<li><code>Prior history of MDS</code>: yes, no, or unknown</li>
+<li><code>Prior history of cancer</code>: yes, no, or unknown</li>
+<li><code>NCCN AML Risk Category</code>: favorable, intermediate, or poor/adverse (new diagnosis of non-APL AML only)</li>
+<li><code>IPSS-R MDS Cytogenetic Risk Category</code>: very good, good, intermediate, poor, or very poor (new diagnosis of MDS only)</li>
+<li><code>Comment</code>: result interpretation</li>
+</ul>
+</section>
+<section id="updating-reported-variants" class="level3">
+<h3 class="anchored" data-anchor-id="updating-reported-variants">Updating Reported Variants</h3>
+<p>Use the checkboxes next to individual variants on the <code>ChromoSeq Data</code> tab to include or remove them from the clinical report.</p>
+<p>In general, the set of variants included by default are the appropriate set to report. Possible exceptions include:</p>
+<p><strong>Copy Number Alterations</strong></p>
+<ul>
+<li>A clinically relevant copy number alteration is included under filtered variants and is clearly visible on the <code>*genomwide.pdf</code> coverage plot</li>
+<li>A clinically relevant copy number alteration is included under filtered variants, is visible on the <code>*genomwide.pdf</code> coverage plot, and has been identified by orthogonal studies in the same patient</li>
+</ul>
+<p><strong>Structural Variants</strong></p>
+<ul>
+<li>A clinically relevant structural variant is included under filtered variants, the variant call appears to be valid (based on coverage, a contig that <a href="https://genome.ucsc.edu/cgi-bin/hgBlat">blats</a> cleanly to the identified regions, etc.), and the variant was reported by cytogenetics or there is high suspicion for the variant given the clinical presentation</li>
+</ul>
+<p><strong>Gene Mutations</strong></p>
+<ul>
+<li>A gene mutation is included under filtered variants, the variant call appears to be valid (based on coverage, review in <a href="https://software.broadinstitute.org/software/igv/">IGV</a>, etc.), and the variant was reported by a previous or the corresponding MyeloSeq study</li>
+</ul>
+</section>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>Case interpretations are provided in the comment field and should be tailored to the specific variants identified, patient history, and associated clinical data. The goal is to clearly and concisely describe key results, comment on consistencies/discrepancies with orthogonal molecular and cytogenetic testing, and provide a comprehensive summary of how the results impact the patient’s diagnosis and overall risk stratification, if appropriate.</p>
+<p>The following statements (in order) may be useful for templating comments in some cases but will require modification for accuracy, clarity, and readability. Note that the interpretive comments included in cytogenetic reports provide excellent examples for how to appropriately describe the cytogenetic alterations enumerated by <a href="https://iscn.karger.com">International System for Human Cytogenomic Nomenclature</a> (ISCN) karyotypes.</p>
+<ul>
+<li><em>(No copy number alterations | A [deletion | duplication] of the [long | short] arm of chromosome [chr] | No copy number alterations) (was | were) identified, consistent with (a complex karyotype and) the corresponding cytogenetic studies (G22-####).</em></li>
+<li><em>(In addition, a (translocation | inversion | interchromosomal rearrangement | intrachromosomal rearrangement) involving the ([short | long] arm of [chr] and the [short | long] arm of [chr]) was identified.)</em></li>
+<li><em>((A mutation in [gene] | Mutations in [genes]) (was | were) also detected, consistent with the corresponding MyeloSeq study (W22-####).)</em></li>
+<li><em>(We note that a mutation in [gene] detected by MyeloSeq at a VAF of [VAF] was not identified by ChromoSeq, although this is below the limit of detection of this assay.)</em></li>
+<li><em>(Given the patient history and associated clinical data, this case is best classified as [classification] by International Consensus Classification (ICC) criteria.)</em></li>
+<li><em>(The overall constellation of mutations is consistent with [risk group] molecular risk by National Comprehensive Cancer Network (NCCN) guidelines.)</em></li>
+</ul>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ol type="1">
+<li><p>Arber DA <em>et al</em>. International Consensus Classification of Myeloid Neoplasms and Acute Leukemias: integrating morphologic, clinical, and genomic data. <em>Blood</em>. 2022 Sep 15;140(11):1200-1228. <a href="https://pubmed.ncbi.nlm.nih.gov/35767897/">PMID: 35767897</a></p></li>
+<li><p>Duncavage EJ <em>et al</em>. Genome Sequencing as an Alternative to Cytogenetic Analysis in Myeloid Cancers. <em>N Engl J Med</em>. 2021 Mar 11;384(10):924-935. <a href="https://pubmed.ncbi.nlm.nih.gov/33704937/">PMID: 33704937</a></p></li>
+<li><p>Greenberg PL <em>et al</em>. Myelodysplastic Syndromes, Version 2.2017, NCCN Clinical Practice Guidelines in Oncology. <em>J Natl Compr Canc Netw</em>. 2017 Jan;15(1):60-87. <a href="https://pubmed.ncbi.nlm.nih.gov/28040720/">PMID: 28040720</a></p></li>
+<li><p>Greenberg PL <em>et al</em>. NCCN Guidelines Insights: Myelodysplastic Syndromes, Version 3.2022. <em>J Natl Compr Canc Netw</em>. 2022 Feb;20(2):106-117. <a href="https://pubmed.ncbi.nlm.nih.gov/35130502/">PMID: 35130502</a></p></li>
+<li><p>Papaemmanuil E <em>et al</em>. Genomic Classification and Prognosis in Acute Myeloid Leukemia. <em>N Engl J Med</em>. 2016 Jun 9;374(23):2209-2221. <a href="https://pubmed.ncbi.nlm.nih.gov/27276561/">PMID: 27276561</a></p></li>
+<li><p>Pollyea DA <em>et al</em>. NCCN Guidelines Insights: Acute Myeloid Leukemia, Version 2.2021. <em>J Natl Compr Canc Netw</em>. 2021 Jan 6;19(1):16-27. <a href="https://pubmed.ncbi.nlm.nih.gov/33406488/">PMID: 33406488</a></p></li>
+<li><p>Tallman MS <em>et al</em>. Acute Myeloid Leukemia, Version 3.2019, NCCN Clinical Practice Guidelines in Oncology. <em>J Natl Compr Canc Netw</em>. 2019 Jun 1;17(6):721-749. <a href="https://pubmed.ncbi.nlm.nih.gov/31200351/">PMID: 31200351</a></p></li>
+</ol>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
