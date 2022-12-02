@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <p>ChromoSeq sequencing runs are started on Friday, and output data are copied to the Department of Pathology server the following Sunday or Monday. There is a standing appointment for faculty sign out at 14:00 on Tuesday, which may be moved or canceled depending on faculty and data availability.</p>
 <p>Once data are available, for each case:</p>
 <ul>
-<li>Evaluate the overall quality of the data based on the genome-wide coverage plot (<code>*genomwide.pdf</code>), quality control metrics (<code>ChromoSeq QC</code>), and haplotect output</li>
+<li>Evaluate the overall quality of the data based on the genome-wide coverage plot (<code>*genomewide.pdf</code>), quality control metrics (<code>ChromoSeq QC</code>), and haplotect output</li>
 <li>Review the patient history in detail (diagnostic and treatment history, prior molecular and cytogenetic testing results, corresponding morphological case, corresponding cytogenetic and molecular testing results, etc.)</li>
 <li>Fill in structured data fields using the <code>ChromReporter</code> tool</li>
 <li>Update the set of variants included in the clinical report based on orthogonal clinical data, patient history, and variant quality</li>
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <p>You will need both read and write access to the <code>batchdir/</code> directory to template cases. If you do not have both, ask one of the fellows to help arrange access.</p>
 <p>Data from individual sequencing runs are stored in the <code>batchdir/</code> directory and named by run date. Data from individual cases are stored in subfolders named by patient MRN, CoPath accession, and specimen type. There should be four files for each case:</p>
 <ul>
-<li><code>*genomwide.pdf</code>: genome-wide coverage plot applying all appropriate corrections; used to visually assess copy number alterations</li>
+<li><code>*genomewide.pdf</code>: genome-wide coverage plot applying all appropriate corrections; used to visually assess copy number alterations</li>
 <li><code>*genomeWideCorrection.pdf</code>: genome-wide coverage plots applying different subsets of corrections (or no correction); used to visually assess copy number alterations</li>
 <li><code>*chromoseq.txt</code>: human-readable summary of variants identified and quality control metrics; used as an alternative source of data also available via the <code>ChromReporter</code> tool</li>
 <li><code>*chromoseq.json</code>: machine-readable summary of variants identified, quality control metrics, and case information; used by the <code>ChromReporter</code> tool to generate the clinical report</li>
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="reporting-tool" class="level3">
 <h3 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h3>
-<p>The <code>ChromReporter</code> reporting tool is a JavaScript application developed and maintained by Ajay Khanna at the Mcdonnell Genome Institute. The application can be launched in a web browser (Chrome, Safari, etc.) by navigating to the <code>ChromoSeq/ChromReporter/</code> directory and clicking on the <code>index.html</code> file.</p>
+<p>The <code>ChromReporter</code> reporting tool is a JavaScript application developed and maintained by Ajay Khanna at the McDonnell Genome Institute. The application can be launched in a web browser (Chrome, Safari, etc.) by navigating to the <code>ChromoSeq/ChromReporter/</code> directory and clicking on the <code>index.html</code> file.</p>
 <p>The <code>ChromReporter</code> tool reads data from the <code>*chromoseq.json</code> files associated with each case. Clicking on <code>Choose File</code> and then selecting a JSON will bring up four tabs displaying the information stored for an individual case:</p>
 <ul>
 <li><code>Case Information</code>: contains structured fields to input case information and relevant clinical data as well as a comment field to provide a narrative interpretation for each case</li>
@@ -146,8 +146,8 @@ ul.task-list li input[type="checkbox"] {
 <p>In general, the set of variants included by default are the appropriate set to report. Possible exceptions include:</p>
 <p><strong>Copy Number Alterations</strong></p>
 <ul>
-<li>A clinically relevant copy number alteration is included under filtered variants and is clearly visible on the <code>*genomwide.pdf</code> coverage plot</li>
-<li>A clinically relevant copy number alteration is included under filtered variants, is visible on the <code>*genomwide.pdf</code> coverage plot, and has been identified by orthogonal studies in the same patient</li>
+<li>A clinically relevant copy number alteration is included under filtered variants and is clearly visible on the <code>*genomewide.pdf</code> coverage plot</li>
+<li>A clinically relevant copy number alteration is included under filtered variants, is visible on the <code>*genomewide.pdf</code> coverage plot, and has been identified by orthogonal studies in the same patient</li>
 </ul>
 <p><strong>Structural Variants</strong></p>
 <ul>
