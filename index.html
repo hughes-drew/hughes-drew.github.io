@@ -120,6 +120,13 @@ ul.task-list li input[type="checkbox"] {
 <p>After selecting variants to report, entering structured data, and writing the case interpretation, clicking on <code>View PDF</code> generates a formatted PDF report for review. From this page, clicking <code>View JSON</code> generates a JSON file containing all of the case information, including user-entered data. To save work/update a case in progress, save the JSON with the same name and in the same location as the original file.</p>
 <p>Note: the <code>Submit to CoPath</code> checkbox is <strong>only used by faculty</strong> when signing out cases. This box should never be checked by trainees templating cases.</p>
 </section>
+<section id="quality-control-review" class="level3">
+<h3 class="anchored" data-anchor-id="quality-control-review">Quality Control Review</h3>
+<p>Cases with any of the following under the <code>ChromoSeq QC</code> tab may require additional sequencing, preparation of a new sequencing library, or submission of an alternative specimen:</p>
+<ul>
+<li>Haplotect: &gt;1 informative site and contamination estimate &gt;1%</li>
+</ul>
+</section>
 <section id="structured-data-fields" class="level3">
 <h3 class="anchored" data-anchor-id="structured-data-fields">Structured Data Fields</h3>
 <ul>
@@ -134,7 +141,10 @@ ul.task-list li input[type="checkbox"] {
 <li><code>Plt (K/cumm)</code>: platelet count (K/cumm) recorded in the complete blood count (CBC) from the corresponding bone marrow biopsy</li>
 <li><code>Sign-out Pathologist</code>: Eric Duncavage or Molly Schroeder</li>
 <li><code>Stated Diagnosis</code>: AML, CML, MDS, MPN, MDS/MPN, or other</li>
-<li><code>Diagnosis timepoint</code>: new diagnosis, recurrence, or other</li>
+<li><code>Diagnosis timepoint</code>: new diagnosis, recurrence, or other
+<ul>
+<li>In general, patients recently diagnosed at an outside institution who are being referred for evaluation without prior treatment should be counted as new diagnoses</li>
+</ul></li>
 <li><code>Transplant</code>: allogeneic, autologous, or NA</li>
 <li><code>Prior history of MDS</code>: yes, no, or unknown</li>
 <li><code>Prior history of cancer</code>: yes, no, or unknown</li>
