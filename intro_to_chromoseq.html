@@ -123,12 +123,52 @@ ul.task-list li input[type="checkbox"] {
 <section id="quality-control-review" class="level3">
 <h3 class="anchored" data-anchor-id="quality-control-review">Quality Control Review</h3>
 <p>Quality control metrics are summarized under the <code>ChromSeq QC</code> tab. Cases with any of the following may require additional sequencing, preparation of new sequencing libraries, or submission of alternative specimens:</p>
-<ul>
-<li>Mean genome-wide coverage: &lt;40X</li>
-<li>Hotspot coverage:</li>
-<li>Target gene coverage:</li>
-<li>Haplotect: &gt;1 informative site and contamination estimate &gt;1%</li>
-</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric</th>
+<th style="text-align: right;">Reference Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Average Coverage (X)</td>
+<td style="text-align: right;">&gt;40X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total Reads (10<sup>9</sup>)</td>
+<td style="text-align: right;">&gt;1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total Base Pairs (10<sup>9</sup>)</td>
+<td style="text-align: right;">&gt;150</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mapped Reads (%)</td>
+<td style="text-align: right;">&gt;95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duplicate Reads (%)</td>
+<td style="text-align: right;">&lt;40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unique Reads (%)</td>
+<td style="text-align: right;">&gt;60</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Properly Paired Reads (%)</td>
+<td style="text-align: right;">&gt;95</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mean Insert Size (bp)</td>
+<td style="text-align: right;">&gt;300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Haplotect (informative sites &gt;0) (%)</td>
+<td style="text-align: right;">≤1</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="structured-data-fields" class="level3">
 <h3 class="anchored" data-anchor-id="structured-data-fields">Structured Data Fields</h3>
