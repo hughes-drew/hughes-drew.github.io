@@ -1,0 +1,12 @@
+---
+title: "Resources"
+toc: false
+---
+
+## Clinical Teaching
+
+[Introduction to ChromoSeq for Trainees](intro_to_chromoseq.qmd)
+
+[Introduction to MyeloSeq for Trainees](intro_to_myeloseq.qmd)
+
+[Introduction to GatewaySeq for Trainees](intro_to_gatewayseq.qmd)

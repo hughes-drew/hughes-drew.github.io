@@ -1,0 +1,25 @@
+---
+title: ""
+image: images/profile.jpg
+about:
+  template: trestles
+  links:
+    - text: "{{< ai cv size=2xl >}}"
+      href: "pdfs/public_cv.pdf"
+    - text: "{{< ai google-scholar size=2xl >}}"
+      href: https://scholar.google.com/citations?user=oYrf7kAAAAAJ&hl=en
+    - text: "{{< fa brands github size=2xl >}}"
+      href: https://github.com
+    - text: "{{< fa envelope size=2xl >}}"
+      href: "mailto: hughes.andrew@wustl.edu"
+---
+
+::: {style="text-align: justify"}
+I'm an Assistant Professor in the Department of Pathology & Immunology at [Washington University School of Medicine](https://pathology.wustl.edu/people/drew-hughes-md-phd/). My clinical responsibilities include sign out of next-generation sequencing assays for both solid and liquid tumors:
+
+-   [ChromoSeq](https://pathologyservices.wustl.edu/services-tests/chromoseq/)
+-   [GatewaySeq](https://pathologyservices.wustl.edu/items/gatewayseq-ngs-panel-with-interpretation/)
+-   [MyeloSeq](https://pathologyservices.wustl.edu/items/myeloseq/)
+
+My research interests include technology development to support clinical next-generation sequencing, including applications of machine learning to genomic data, bioinformatic method development, and liquid biopsy.
+:::
