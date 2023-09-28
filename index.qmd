@@ -5,7 +5,7 @@ about:
   template: trestles
   links:
     - text: "{{< ai cv size=2xl >}}"
-      href: "pdfs/public_cv.pdf"
+      href: "docs/public_cv.pdf"
     - text: "{{< ai google-scholar size=2xl >}}"
       href: https://scholar.google.com/citations?user=oYrf7kAAAAAJ&hl=en
     - text: "{{< fa brands github size=2xl >}}"
