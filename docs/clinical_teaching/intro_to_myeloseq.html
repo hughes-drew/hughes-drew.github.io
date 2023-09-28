@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Drew Hughes, MD, PhD - MyeloSeq: Introduction for Trainees</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Drew Hughes, MD, PhD</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#qc-review" id="toc-qc-review" class="nav-link" data-scroll-target="#qc-review">QC Review</a></li>
+  <li><a href="#reporting-tool" id="toc-reporting-tool" class="nav-link" data-scroll-target="#reporting-tool">Reporting Tool</a></li>
+  <li><a href="#patient-history" id="toc-patient-history" class="nav-link" data-scroll-target="#patient-history">Patient History</a></li>
+  <li><a href="#variant-review" id="toc-variant-review" class="nav-link" data-scroll-target="#variant-review">Variant Review</a></li>
+  <li><a href="#variant-classification" id="toc-variant-classification" class="nav-link" data-scroll-target="#variant-classification">Variant Classification</a></li>
+  <li><a href="#case-interpretation" id="toc-case-interpretation" class="nav-link" data-scroll-target="#case-interpretation">Case Interpretation</a></li>
+  <li><a href="#uploading-cases-to-copath" id="toc-uploading-cases-to-copath" class="nav-link" data-scroll-target="#uploading-cases-to-copath">Uploading Cases to CoPath</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">MyeloSeq: Introduction for Trainees</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<style>title {text-align: left}</style>
+<style>body {text-align: justify}</style>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p><a href="https://pathologyservices.wustl.edu/items/myeloseq/">MyeloSeq</a> is a high-depth tumor-only targeted sequencing panel designed to identify recurrent gene mutations in patients with myeloid neoplasms. MyeloSeq may be performed as part of a patient’s initial diagnosis (where it supports disease classification, treatment selection, and risk stratification) as well as for monitoring. MyeloSeq’s limit of detection (LOD) for identifying new variants is 2.0% variant allele fraction (VAF). In addition, MyeloSeq’s LOD for detecting previously identified mutations is 0.1%, which is sufficient for measurable residual disease (MRD) assessment.</p>
+</section>
+<section id="workflow" class="level3">
+<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
+<p>MyeloSeq is currently run once per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday, and data are typically available for analysis by Wednesday morning. Trainees review the sequencing data and template clinical reports for sign out by 1400 on Friday afternoon. Briefly, trainees are expected to:</p>
+<ul>
+<li>Summarize clinically relevant information in a concise history</li>
+<li>Review quality control data and notify the fellow on service of any cases that don’t meet target thresholds</li>
+<li>Evaluate and classify individual variants</li>
+<li>Provide a brief clinical interpretation for the overall set of mutations identified</li>
+<li>Upload case data to CoPath and format the clinical report</li>
+<li>Notify the fellow and/or attending on service of any questions or concerns related to the technical details of the case and/or the clinical interpretation of the data</li>
+</ul>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>You will need read access to the Department of Pathology server as well as an active CoPath account to prepare cases. Please reach out to the fellow on service to arrange access if needed. Accessing these resources from off campus will require you to be on the medical school virtual private network (VPN).</p>
+<p>To connect to the department server on a Windows computer, use the File Explorer application:</p>
+<ul>
+<li>Right click on <code>This PC</code> and select <code>Map network drive...</code></li>
+<li>Type <code>\\pathfiles.wustl.edu/AMP/Genomics/Myeloseq_Results</code> into the <code>Folder</code> box and click <code>Finish</code></li>
+</ul>
+<p>To access data on a Mac, use the Finder application:</p>
+<ul>
+<li>Select <code>Go</code> → <code>Connect to Server</code> from the menu bar (or press <code>⌘K</code>)</li>
+<li>Type <code>smb://pathfiles.wustl.edu/AMP/Genomics/Myeloseq_Results</code> into the Server Address box and click Connect</li>
+</ul>
+<p>Cases are organized on the department server by batch. Each batch directory contains a separate folder for each case as well as a TSV file summarizing the quality control metrics for all cases (<code>QC_metrics.tsv</code>). Each case folder contains the following files:</p>
+<ul>
+<li><code>*annotated.vcf.gz</code>: variant call format file of all variants detected by the analysis pipeline</li>
+<li><code>*annotated_filtered.vcf.gz</code>: variant call format file of filtered variants</li>
+<li><code>*cram</code>: alignment file</li>
+<li><code>*cram.crai</code>: alignment index</li>
+<li><code>*report.json</code>: case report text file</li>
+<li><code>*report.txt</code>: case report json file</li>
+</ul>
+</section>
+<section id="qc-review" class="level3">
+<h3 class="anchored" data-anchor-id="qc-review">QC Review</h3>
+<p>The first step in reviewing a case is to ensure that the sequencing data meet the validated quality thresholds. These data are included at the top of each <code>*report.txt</code> file along with reference ranges:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Total bases <span class="er">(</span><span class="ex">Gbp</span><span class="kw">)</span>     <span class="ex">15.0</span>    <span class="op">&gt;</span>12</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Total input reads <span class="er">(</span><span class="ex">M</span><span class="kw">)</span> <span class="ex">134.1</span>   <span class="op">&gt;</span>100</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Q30 bases R1 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>      <span class="ex">95.9</span>    <span class="op">&gt;</span>90</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Q30 bases R2 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>      <span class="ex">94.4</span>    <span class="op">&gt;</span>90</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Mismatched bases R1 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">0.22</span>    <span class="op">&lt;</span>0.9</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Mismatched bases R2 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">0.24</span>    <span class="op">&lt;</span>0.9</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Mapped reads <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>      <span class="ex">99.6</span>    <span class="op">&gt;</span>98</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Insert length: mean   147.0   <span class="op">&gt;</span>120</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Aligned reads in target region <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>    <span class="ex">74.7</span>    <span class="op">&gt;</span>70</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Target bases <span class="op">&gt;</span>250x <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>        <span class="ex">99.4</span>    <span class="op">&gt;</span>96</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Target bases <span class="op">&gt;</span>1250x <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">95.0</span>    <span class="op">&gt;</span>85</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Average alignment coverage over target region 4370.7  <span class="op">&gt;</span>2500</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">UMI</span> SUMMARY: On target mean family depth        7.8     <span class="op">&gt;</span>5 <span class="op">&lt;</span>15</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">UMI</span> SUMMARY: Families discarded <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>     <span class="ex">20.4</span>    <span class="op">&lt;</span>30</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">AMPLICON</span> SUMMARY: Amplicons with low coverage <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">6.1</span>     <span class="op">&lt;</span>50</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The most important metrics to focus on are <code>COVERAGE SUMMARY: Average alignment coverage over target region</code>, <code>COVERAGE SUMMARY: Target bases &gt;250x (%)</code>, and <code>MAPPING/ALIGNING SUMMARY: Total bases (Gbp)</code>. For a new diagnosis, mean coverage needs to be &gt;1,000x and &gt;96% of the target space needs to acheive &gt;250x coverage. For a negative MRD case, mean coverage needs to be &gt;2,500x, and positions with previously identified mutations need to be covered at &gt;2,500x.</p>
+<p>Cases that don’t meet the mean coverage and/or coverage breadth targets and also don’t have adequate total bases may benefit from additional sequencing of the existing library. Cases that don’t meet the mean coverage and/or coverage breadth targets and do have adequate total sequencing may indicate a failed sequencing library, requiring a new library to be made and/or an alternative specimen to be analyzed.</p>
+<p>It is also important to review the haplotect summary for every case:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">***</span> Haplotect Contamination Estimate <span class="pp">***</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">totalSites</span>      informativeSites        meanCoverage    contaminatingHaplotypeCount     totalReads      contaminationEstimate</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">75</span>      2       1881.24 4.0     7582    0.0011</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Haplotect is an algorithm that analyzes known polymorphic sites in the genome to quantitatively estimate sample contamination (i.e., evidence of the presence of DNA from more than one individual in the sequencing data). A <code>contaminationEstimate</code> &gt;0.02 (2%) is concerning for contamination. However, in patients who have received an allogeneic hematopoietic cell transplant, elevated Haplotect scores most likely represent mixed chimerism, which should be noted in the case interpretation.</p>
+</section>
+<section id="reporting-tool" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h3>
+<p>We use a javascript reporting tool to help template cases: <code>Genomics/Myeloseq_Results/MyeloReporter</code>. Clicking <code>index.html</code> opens the application in your default web browser (e.g., Chrome, Safari, etc.). To load a case, click <code>Choose File</code> and select the corresponding <code>*report.json</code> file. Alternatively, in most browsers, you can drag the JSON file on top of the <code>Choose File</code> button to upload it. Uploading the file pulls in detailed information for all variants identified by the analysis pipeline and generates several fields for data entry: <code>Variant Interpretation</code>, <code>Clinical History</code>, and <code>Specimen Site</code>.</p>
+</section>
+<section id="patient-history" class="level3">
+<h3 class="anchored" data-anchor-id="patient-history">Patient History</h3>
+<p>Please provide a concise history summarizing clinically relevant patient information. Histories should not be copy-pasted from clinical notes and should not contain any undefined abbreviations. Key data to review are:</p>
+<ul>
+<li>Recent <strong>clinical notes</strong> to place the specimen in the appropriate clinical context and treatment timepoint (notes from the Bone Marrow Transplant service are often the most informative for this purpose)</li>
+<li>The corresponding <strong>surgical pathology case</strong></li>
+<li>The corresponding <strong>cytogenetic studies</strong></li>
+</ul>
+<p>Here, corresponding means from the same bone marrow biopsy, if applicable. You will also need to review prior MyeloSeq and cytogenetic studies to determine which variants are being followed in patients who are being monitored. In addition, it can be helpful to check for measurable residual disease testing performed by flow cytometry and/or the results of STR identity testing in patients who have received allogeneic hematopoietic cell transplants, but these data generally do not need to be included in the history unless there are specific points of confusion they address.</p>
+<p>In general, the following structure is appropriate for most cases:</p>
+<p><em>(##)-year-old (man|woman) with a history of (myeloid neoplasm (diagnosed YYYY-MM-DD) with [a normal karyotype|a complex karyotype|{short list of cytogenetic abnormalities}] [and mutations in {gene list}]), who (is currently being treated and|is status post hematopoietic cell transplant (YYYY-MM-DD) and) (presents for evaluation|presents for treatment|presents for follow up). Corresponding bone marrow biopsy (S##-####) shows (top-line diagnosis). Corresponding cytogenetic studies (G##-####) show ({list of FISH findings}|karyotype|no evidence of clonal aberrations). Corresponding ChromoSeq study (W##-###) (did not identify any copy number alterations, structural variants, or gene mutations|showed {list of variants}).</em></p>
+</section>
+<section id="variant-review" class="level3">
+<h3 class="anchored" data-anchor-id="variant-review">Variant Review</h3>
+<p>Within the reporting tool, variants are organized into the following sections:</p>
+<ul>
+<li><code>Reportable Mutations</code>: new variants detected at a VAF &gt;2% or prior variants detected at a VAF &gt;0.1%</li>
+<li><code>Prior Mutations Not Detected in This Case</code>: prior variants not detected at &gt;0.1% VAF</li>
+<li><code>Low-Level Somatic Mutations</code>: variants that passed the quality thresholds defined by the analysis pipeline but that were present below the validated VAF thresholds</li>
+<li><code>Filtered Variants (Report with Caution)</code>: variants that failed quality thresholds defined by the analysis pipeline; these should almost never be reported</li>
+<li><code>Tier 4 Polymorphisms</code>: variants that passed the quality thresholds defined by the analysis pipeline and that have been reported at &gt;0.1% of individuals in population databases</li>
+</ul>
+<p>In general, the default set of variants selected for reporting is correct. However, linking to historical cases is based on patient identifier lists that are not always complete, meaning sometimes the set of previously detected variants is missing of incomplete. Please confirm that previously reported variants (based on your review of prior MyeloSeq cases) appear in either the <code>Reportable Mutations</code> or <code>Prior Mutations Not Detected in This Case</code> tables. In some cases, missing variants can be recovered from the <code>Low-Level Somatic Mutations</code> table. Other times, this requires additional investigation. Please let the fellow on service know if you encounter a case that does not appear to be correctly linked to previous studies.</p>
+<p>If you have reason to believe that a particular variant is an artifact, you can remove it from the report by unchecking the <code>Report</code> or <code>Report + previously detected</code> box associated with each record.</p>
+<p>Variants that appear in <code>Tier 4 Polymorphisms</code> should almost never be included in the report. The exception to this guideline is if there is a specific clinical concern for inherited cancer predisposition in a particular patient and a known pathogenic/likely pathogenic variant appears in this table. This most often occurs in relation to <em>DDX41</em> variants. Patients with <em>DDX41</em>-mutated myeloid neoplams typically have one germline and one somatic <em>DDX41</em> variant. Some pathogenic germline <em>DDX41</em> variants have been seen in the population at &gt;0.1% minor allele frequency and, therefore, may appear in the <code>Tier 4 Polymorphisms</code> table.</p>
+</section>
+<section id="variant-classification" class="level3">
+<h3 class="anchored" data-anchor-id="variant-classification">Variant Classification</h3>
+<p>The current version of the reporting tool classifies individual variants as pathogenic or of uncertain significance based on whether they have been reported by one of several high-quality sequencing studies involving large cohorts of patients with myeloid neoplasms. We have modified this classification for our clinical reports, but this action is not yet supported within the reporting tool. Therefore, variant classifications have to be manually updated after exporting the data from the reporting tool. Please ask the fellows for a current version of the variant classification standard operating procedure for details regarding the variant classification rules. Briefly, variants should be classified as one of:</p>
+<ul>
+<li><code>Potentially therapeutic</code>: variant associated with an FDA-approved targeted therapy (<em>FLT3</em>-ITD, <em>IDH1</em> R132, <em>IDH2</em> R140, and <em>IDH2</em> R172)</li>
+<li><code>Pathogenic</code>: not potentially therapeutic and previously reported by high quality sequencing studies of patients with myeloid neoplasms or a recurrent class of mutations in patients with myeloid neoplasms as defined by National Comprehensive Cancer Network (NCCN) guidelines</li>
+<li><code>Possibly donor-derived</code>: not potentially therapeutic or pathogenic, found at a VAF of 35%–65% in a patient after hematopoietic cell transplantation</li>
+<li><code>Possibly germline</code>: not potentially therapeutic or pathogenic, found at a VAF of 35%–65% in a patient with no history of hematopoietic cell transplantation</li>
+<li><code>Uncertain</code>: all other variants</li>
+</ul>
+</section>
+<section id="case-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="case-interpretation">Case Interpretation</h3>
+<p>The goal of the case interpretation is to summarize the clinical significance of the overall set of mutations observed in the case with an emphasis on their collective implications for diagnosis, treatment, and risk stratification.</p>
+<p>For new diagnoses of myelodysplastic syndrome and acute myeloid leukemia, this should include the disease classification according to the <a href="https://pubmed.ncbi.nlm.nih.gov/35767897/">International Consensus Classification (ICC)</a> critera as well as <a href="https://pubmed.ncbi.nlm.nih.gov/35732831/">the 5th edition of the World Health Organization Classification of Haematolymphoid Tumours (WHO-HAEM5)</a> when possible. In addition, an overall risk stratification consistent with the <a href="https://www.nccn.org/guidelines/category_1">National Comprehensive Cancer Network (NCCN)</a> guidelines should be provided for new diagnoses.</p>
+<p>Examples:</p>
+<ul>
+<li><p><em>Mutations in PTPN11, RUNX1, and U2AF1 are identified. This case is best classified as acute myeloid leukemia with myelodysplasia-related gene mutations by International Consensus Classification (ICC) criteria or acute myeloid leukaemia, myelodysplasia-related by the 5th edition of the World Health Organization Classification of Haematolymphoid Tumours (WHO-HAEM5). The overall constellation of mutations is consistent with high risk acute myeloid leukemia by National Comprehensive Cancer Network (NCCN) guidelines.</em></p></li>
+<li><p><em>A TP53 c.713G&gt;A (p.C238Y) mutation is identified. This case is best classified as myelodysplastic syndrome with mutated TP53 by International Consensus Classification (ICC) criteria, or myelodysplastic neoplasm with biallelic TP53 inactivation by the 5th edition of the World Health Organization Classification of Hematolymphoid Tumors (WHO-HAEM5). The overall constellation of mutations is consistent with high risk myelodysplastic syndrome.</em></p></li>
+</ul>
+<p>For patients who have an existing diagnosis and are being monitored, the interpretation usually consists entirely of an assessment of MRD status, i.e., MRD positive or MRD negative.</p>
+<p>Examples:</p>
+<ul>
+<li><p><em>Previously identified mutations in FLT3 and IDH1 are again seen, consistent with persistent molecular disease (measurable residual disease [MRD] positive). There is evidence of significant chimerism.</em></p></li>
+<li><p><em>Previously identified mutations in ASXL1, DNMT3A, and TP53 are not seen, consistent with mutation clearance and measurable residual disease (MRD) negative status at a sensitivity of at least 0.1%. Overall quality control metrics are within normal limits. There is no evidence of significant chimerism.</em></p></li>
+<li><p><em>Previously identified leukemia-associated mutations in CEBPA, FLT3, NPM1, and WT1 are not seen, consistent with mutation clearance and measurable residual disease (MRD) negative status at a sensitivity of at least 0.1%. Overall quality control metrics are within normal limits. We note that a TET2 c.3409+1G&gt;T mutation is again seen at a reduced variant allele fraction compared to this patient’s prior study. Persistent TET2 mutations after treatment are not associated with an increased risk of relapse in patients with acute myeloid leukemia (PMID: 29601269).</em></p></li>
+</ul>
+<p>For patients who have received an allogeneic hematopoeitic cell transpant, we generally describe haplotect contamination estimates of 2%–5% as evidence low-level chimerism and estimates &gt;5% as evidence of significant chimerism.</p>
+<p>MyeloSeq is also ordered on peripheral blood specimens for patients with chronic unexplained cytopenias, particularly in the outpatient setting. Detecting mutations in these patients demonstrates they have clonal hematopoiesis, but it is generally not sufficient to establish a specific diagnosis, which usually requires a bone marrow biopsy.</p>
+<p>Examples:</p>
+<ul>
+<li><p><em>Mutations in BCOR and DNMT3A are identified, consistent with the diagnosis of a myeloid neoplasm. The differential diagnosis includes clonal cytopenia of undetermined significance (CCUS) and myelodysplastic syndrome (MDS). A bone marrow biopsy is required for further evaluation.</em></p></li>
+<li><p><em>No mutations are identified. Overall quality control metrics are within normal limits. The absence of a mutation detectable with this assay does not rule out a diagnosis of myelodysplastic syndrome.</em></p></li>
+</ul>
+</section>
+<section id="uploading-cases-to-copath" class="level3">
+<h3 class="anchored" data-anchor-id="uploading-cases-to-copath">Uploading Cases to CoPath</h3>
+<p>Once the final set of reportable variants have been selected and the <code>Variant Interpretation</code>, <code>Clinical History</code>, and <code>Specimen Site</code> have all been entered, clicking <code>Generate and download RTF</code> saves a formatted version of the report as an rtf document to your default downloads location. Note that some default applications for view <code>*.rtf</code> files disrupts the structure of the tables. Please open the <code>*.rtf</code> files with Microsoft Word to display them correctly. The report includes blue headers corresponding to the structured sections of the CoPath report: <code>Interpretation</code>, <code>Diagnosis</code>, <code>Results-Commments</code>. To upload the data to CoPath:</p>
+<ol type="1">
+<li>Open the corresponding case in CoPath (select <code>Procedure Entry/Addendum Entry/Edit</code>).</li>
+<li>Enter the name of the attending assigned to the case as well as your own under <code>Procedure Pathologist(s)</code>.</li>
+<li>Click <code>Edit Text</code>, which opens a CoPath instance of Microsoft Word. <strong>Always confirm that the case accession at the top of the CoPath window exactly matches the case accession in the <code>*.rtf</code> document.</strong></li>
+<li>Copy and paste the data (excluding the headers) into each section of the CoPath Word document. Note that by default, text is pasted into CoPath without formatting. Use <strong>Option</strong>-<strong>Shift</strong>-<strong>Command</strong>-<strong>V</strong> on a PC or <strong>Option</strong>-<strong>Control</strong>-<strong>Command</strong>-<strong>V</strong> on a Mac to preserve the text formatting when pasting the data in CoPath. Also, note that the table widths are not cleanly formatted by default. Please extend the right border of the table so that it occupies the full width of the page and arrange the columns so that the content is clean and easy to read.</li>
+<li>Once you’ve finished editing the report, click the pink box in the upper left corner to exit the CoPath Word application.</li>
+<li>Click <code>Save/Next Specimen</code></li>
+<li>If the case is ready to be reviewed by the attending, place it in his/her queue by selecting <code>Complete/Send to Pathologist</code>; otherwise, if you are still working on the case, select <code>No Action</code>.</li>
+<li>Under “Do you want to save changes to specimen W##-####?” click <code>Yes</code> to save your changes; <strong>your work is not saved until you click</strong> <code>Yes</code>.</li>
+</ol>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<section id="background" class="level4">
+<h4 class="anchored" data-anchor-id="background">Background</h4>
+<ul>
+<li>Duncavage EJ <em>et al.</em> Genomic profiling for clinical decision making in myeloid neoplasms and acute leukemia. <em>Blood.</em> 2022 Nov 24;140(21):2228-2247. <a href="https://pubmed.ncbi.nlm.nih.gov/36130297/">PMID: 36130297</a>.</li>
+</ul>
+</section>
+<section id="disease-classification" class="level4">
+<h4 class="anchored" data-anchor-id="disease-classification">Disease Classification</h4>
+<ul>
+<li><p>Arber DA <em>et al.</em> International Consensus Classification of Myeloid Neoplasms and Acute Leukemias: integrating morphologic, clinical, and genomic data. <em>Blood.</em> 2022 Sep 15;140(11):1200-1228. <a href="https://pubmed.ncbi.nlm.nih.gov/35767897/">PMID: 35767897</a>.</p></li>
+<li><p>Khoury JD <em>et al.</em> The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Myeloid and Histiocytic/Dendritic Neoplasms. <em>Leukemia.</em> 2022 Jul;36(7):1703-1719. <a href="https://pubmed.ncbi.nlm.nih.gov/35732831/">PMID: 35732831</a>.</p></li>
+</ul>
+</section>
+<section id="nccn-guidelines" class="level4">
+<h4 class="anchored" data-anchor-id="nccn-guidelines">NCCN Guidelines</h4>
+<p><strong>Please refer to the most recent guidelines published on the <a href="https://www.nccn.org/guidelines/">NCCN</a> website, which may include updates to the references highlighted below.</strong></p>
+<ul>
+<li><p>Gerds AT <em>et al</em>. Myeloproliferative Neoplasms, Version 3.2022, NCCN Clinical Practice Guidelines in Oncology. <em>J Natl Compr Canc Netw.</em> 2022 Sep;20(9):1033-1062. <a href="https://pubmed.ncbi.nlm.nih.gov/36075392/">PMID: 36075392</a>.</p></li>
+<li><p>Greenberg PL <em>et al.</em> NCCN Guidelines® Insights: Myelodysplastic Syndromes, Version 3.2022. <em>J Natl Compr Canc Netw.</em> 2022 Feb;20(2):106-117. <a href="https://pubmed.ncbi.nlm.nih.gov/35130502/">PMID: 35130502</a>.</p></li>
+<li><p>Pollyea DA <em>et al.</em> Acute Myeloid Leukemia, Version 3.2023, NCCN Clinical Practice Guidelines in Oncology. <em>J Natl Compr Canc Netw.</em> 2023 May;21(5):503-513. <a href="https://pubmed.ncbi.nlm.nih.gov/37156478/">PMID: 37156478</a>.</p></li>
+</ul>
+</section>
+<section id="special-cases" class="level4">
+<h4 class="anchored" data-anchor-id="special-cases">Special Cases</h4>
+<ul>
+<li><p>Beck DB <em>et al.</em> Somatic Mutations in <em>UBA1</em> and Severe Adult-Onset Autoinflammatory Disease. <em>N Engl J Med.</em> 2020 Dec 31;383(27):2628-2638. <a href="https://pubmed.ncbi.nlm.nih.gov/33108101">PMID: 33108101</a>.</p></li>
+<li><p>Jongen-Lavrencic M <em>et al.</em> Molecular Minimal Residual Disease in Acute Myeloid Leukemia. <em>N Engl J Med.</em> 2018 Mar 29;378(13):1189-1199. <a href="https://pubmed.ncbi.nlm.nih.gov/29601269">PMID: 29601269</a>.</p></li>
+<li><p>Li P <em>et al.</em> The genetic landscape of germline <em>DDX41</em> variants predisposing to myeloid neoplasms. <em>Blood.</em> 2022 Aug 18;140(7):716-755. <a href="https://pubmed.ncbi.nlm.nih.gov/35671390/">PMID: 35671390</a>.</p></li>
+<li><p>Taube F <em>et al.</em> <em>CEBPA</em> mutations in 4708 patients with acute myeloid leukemia: differential impact of bZIP and TAD mutations on outcome. <em>Blood.</em> 2022 Jan 6;139(1):87-103. <a href="https://pubmed.ncbi.nlm.nih.gov/34320176/">PMID: 34320176</a>.</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
