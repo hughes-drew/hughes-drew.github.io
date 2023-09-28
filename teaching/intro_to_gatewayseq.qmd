@@ -1,0 +1,14 @@
+---
+title: "GatewaySeq: Introduction for Trainees"
+format: html
+editor: visual
+theme: flatly
+toc: false
+---
+
+```{=html}
+<style>title {text-align: left}</style>
+<style>body {text-align: justify}</style>
+```
+
+## Under Construction
