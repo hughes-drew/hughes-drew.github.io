@@ -212,14 +212,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="workflow" class="level3">
 <h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
-<p>MyeloSeq is currently run once per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday, and data are typically available for analysis by Wednesday morning. Trainees review the sequencing data and template clinical reports for sign out by 1400 on Friday afternoon. Briefly, trainees are expected to:</p>
+<p>MyeloSeq is currently run once per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday, and data are typically available for analysis by Wednesday morning. Case assignments are distributed via email by the fellow on service on Monday or Tuesday. Trainees review the sequencing data and template clinical reports for sign out by 1400 on Friday afternoon. Briefly, trainees are expected to:</p>
 <ul>
 <li>Summarize clinically relevant information in a concise history</li>
 <li>Review quality control data and notify the fellow on service of any cases that don’t meet target thresholds</li>
 <li>Evaluate and classify individual variants</li>
 <li>Provide a brief clinical interpretation for the overall set of mutations identified</li>
 <li>Upload case data to CoPath and format the clinical report</li>
-<li>Notify the fellow and/or attending on service of any questions or concerns related to the technical details of the case and/or the clinical interpretation of the data</li>
+<li>Notify the fellow and/or attending on service of any questions or concerns related to the technical details of the data and/or the clinical interpretation of the case</li>
 </ul>
 </section>
 <section id="data" class="level3">
@@ -248,33 +248,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="qc-review" class="level3">
 <h3 class="anchored" data-anchor-id="qc-review">QC Review</h3>
 <p>The first step in reviewing a case is to ensure that the sequencing data meet the validated quality thresholds. These data are included at the top of each <code>*report.txt</code> file along with reference ranges:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Total bases <span class="er">(</span><span class="ex">Gbp</span><span class="kw">)</span>     <span class="ex">15.0</span>    <span class="op">&gt;</span>12</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Total input reads <span class="er">(</span><span class="ex">M</span><span class="kw">)</span> <span class="ex">134.1</span>   <span class="op">&gt;</span>100</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Q30 bases R1 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>      <span class="ex">95.9</span>    <span class="op">&gt;</span>90</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Q30 bases R2 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>      <span class="ex">94.4</span>    <span class="op">&gt;</span>90</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Mismatched bases R1 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">0.22</span>    <span class="op">&lt;</span>0.9</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Mismatched bases R2 <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">0.24</span>    <span class="op">&lt;</span>0.9</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Mapped reads <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>      <span class="ex">99.6</span>    <span class="op">&gt;</span>98</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">MAPPING/ALIGNING</span> SUMMARY: Insert length: mean   147.0   <span class="op">&gt;</span>120</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Aligned reads in target region <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>    <span class="ex">74.7</span>    <span class="op">&gt;</span>70</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Target bases <span class="op">&gt;</span>250x <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>        <span class="ex">99.4</span>    <span class="op">&gt;</span>96</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Target bases <span class="op">&gt;</span>1250x <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">95.0</span>    <span class="op">&gt;</span>85</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">COVERAGE</span> SUMMARY: Average alignment coverage over target region 4370.7  <span class="op">&gt;</span>2500</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">UMI</span> SUMMARY: On target mean family depth        7.8     <span class="op">&gt;</span>5 <span class="op">&lt;</span>15</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">UMI</span> SUMMARY: Families discarded <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>     <span class="ex">20.4</span>    <span class="op">&lt;</span>30</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">AMPLICON</span> SUMMARY: Amplicons with low coverage <span class="er">(</span><span class="ex">%</span><span class="kw">)</span>       <span class="ex">6.1</span>     <span class="op">&lt;</span>50</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 79%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric</th>
+<th style="text-align: right;">Reference Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Total bases (Gb)</td>
+<td style="text-align: right;">&gt;12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Total input reads (M)</td>
+<td style="text-align: right;">&gt;100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Q30 bases R1 (%)</td>
+<td style="text-align: right;">&gt;90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Q30 bases R2 (%)</td>
+<td style="text-align: right;">&gt;90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Mismatched bases R1 (%)</td>
+<td style="text-align: right;">&lt;0.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Mismatched bases R2 (%)</td>
+<td style="text-align: right;">&lt;0.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Mapped reads (%)</td>
+<td style="text-align: right;">&gt;98</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAPPING/ALIGNING SUMMARY: Insert length</td>
+<td style="text-align: right;">&gt;120</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">COVERAGE SUMMARY: Aligned reads in target region (%)</td>
+<td style="text-align: right;">&gt;70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">COVERAGE SUMMARY: Target bases &gt;250x (%)</td>
+<td style="text-align: right;">&gt;96</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CCOVERAGE SUMMARY: Target bases &gt;1250x (%)</td>
+<td style="text-align: right;">&gt;85</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">COVERAGE SUMMARY: Average alignment coverage over target region</td>
+<td style="text-align: right;">&gt;2500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UMI SUMMARY: On target mean family depth</td>
+<td style="text-align: right;">&gt;5 and &lt;15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UMI SUMMARY: Families discarded (%)</td>
+<td style="text-align: right;">&lt;30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AMPLICON SUMMARY: Amplicons with low coverage (%)</td>
+<td style="text-align: right;">&lt;50</td>
+</tr>
+</tbody>
+</table>
 <p>The most important metrics to focus on are <code>COVERAGE SUMMARY: Average alignment coverage over target region</code>, <code>COVERAGE SUMMARY: Target bases &gt;250x (%)</code>, and <code>MAPPING/ALIGNING SUMMARY: Total bases (Gbp)</code>. For a new diagnosis, mean coverage needs to be &gt;1,000x and &gt;96% of the target space needs to acheive &gt;250x coverage. For a negative MRD case, mean coverage needs to be &gt;2,500x, and positions with previously identified mutations need to be covered at &gt;2,500x.</p>
 <p>Cases that don’t meet the mean coverage and/or coverage breadth targets and also don’t have adequate total bases may benefit from additional sequencing of the existing library. Cases that don’t meet the mean coverage and/or coverage breadth targets and do have adequate total sequencing may indicate a failed sequencing library, requiring a new library to be made and/or an alternative specimen to be analyzed.</p>
 <p>It is also important to review the haplotect summary for every case:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">***</span> Haplotect Contamination Estimate <span class="pp">***</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">totalSites</span>      informativeSites        meanCoverage    contaminatingHaplotypeCount     totalReads      contaminationEstimate</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">75</span>      2       1881.24 4.0     7582    0.0011</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">***</span> Haplotect Contamination Estimate <span class="pp">***</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">totalSites</span>      informativeSites        meanCoverage    contaminatingHaplotypeCount     totalReads      contaminationEstimate</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">75</span>      2       1881.24 4.0     7582    0.0011</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Haplotect is an algorithm that analyzes known polymorphic sites in the genome to quantitatively estimate sample contamination (i.e., evidence of the presence of DNA from more than one individual in the sequencing data). A <code>contaminationEstimate</code> &gt;0.02 (2%) is concerning for contamination. However, in patients who have received an allogeneic hematopoietic cell transplant, elevated Haplotect scores most likely represent mixed chimerism, which should be noted in the case interpretation.</p>
 </section>
 <section id="reporting-tool" class="level3">
 <h3 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h3>
-<p>We use a javascript reporting tool to help template cases: <code>Genomics/Myeloseq_Results/MyeloReporter</code>. Clicking <code>index.html</code> opens the application in your default web browser (e.g., Chrome, Safari, etc.). To load a case, click <code>Choose File</code> and select the corresponding <code>*report.json</code> file. Alternatively, in most browsers, you can drag the JSON file on top of the <code>Choose File</code> button to upload it. Uploading the file pulls in detailed information for all variants identified by the analysis pipeline and generates several fields for data entry: <code>Variant Interpretation</code>, <code>Clinical History</code>, and <code>Specimen Site</code>.</p>
+<p>We use a javascript reporting tool to help template clinical reports: <code>Genomics/Myeloseq_Results/MyeloReporter</code>. Clicking <code>index.html</code> opens the application in your default web browser (e.g., Chrome, Safari, etc.). To load a case, click <code>Choose File</code> and select the corresponding <code>*report.json</code> file. Alternatively, in most browsers, you can drag the JSON file on top of the <code>Choose File</code> button to upload it. Uploading the file pulls in detailed information for all variants identified by the analysis pipeline and generates several fields for data entry: <code>Variant Interpretation</code>, <code>Clinical History</code>, and <code>Specimen Site</code>.</p>
 </section>
 <section id="patient-history" class="level3">
 <h3 class="anchored" data-anchor-id="patient-history">Patient History</h3>
