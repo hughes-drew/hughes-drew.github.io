@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/intro_to_myeloseq.html</loc>
+    <lastmod>2024-01-10T01:07:44.105Z</lastmod>
+  </url>
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/intro_to_chromoseq.html</loc>
+    <lastmod>2024-01-10T01:07:43.271Z</lastmod>
+  </url>
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/index.html</loc>
+    <lastmod>2024-01-10T01:07:42.152Z</lastmod>
+  </url>
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/intro_to_gatewayseq.html</loc>
+    <lastmod>2024-01-10T01:07:41.852Z</lastmod>
+  </url>
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/publications.html</loc>
+    <lastmod>2024-01-10T01:07:42.800Z</lastmod>
+  </url>
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/resources.html</loc>
+    <lastmod>2024-01-10T01:07:43.486Z</lastmod>
+  </url>
+</urlset>
