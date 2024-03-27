@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -104,9 +111,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Drew Hughes, MD, PhD</span>
     </a>
@@ -118,18 +125,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -174,13 +181,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <style>title {text-align: left}</style>
 <style>body {text-align: justify}</style>
 <section id="overview" class="level3">
 <h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<p><a href="https://pathologyservices.wustl.edu/items/myeloseq/">MyeloSeq</a> is a high-depth tumor-only targeted sequencing panel designed to identify recurrent gene mutations in patients with myeloid neoplasms. MyeloSeq may be performed as part of a patient’s initial diagnosis (where it supports disease classification, treatment selection, and risk stratification) as well as for monitoring. MyeloSeq’s limit of detection (LOD) for identifying new variants is 2.0% variant allele fraction (VAF). In addition, MyeloSeq’s LOD for detecting previously identified mutations is 0.1%, which is sufficient for measurable residual disease (MRD) assessment.</p>
+<p><a href="https://pathologyservices.wustl.edu/items/myeloseq/">MyeloSeq</a> is a high-depth tumor-only targeted sequencing panel designed to identify recurrent genetic varaints in patients with myeloid neoplasms. MyeloSeq may be performed as part of a patient’s initial diagnosis (where it supports disease classification, treatment selection, and risk stratification) as well as for monitoring. MyeloSeq’s limit of detection (LOD) for identifying new variants is 2.0% variant allele fraction (VAF). In addition, MyeloSeq’s LOD for detecting previously identified variants is 0.1%, which is sufficient for measurable residual disease (MRD) assessment.</p>
 </section>
 <section id="workflow" class="level3">
 <h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
@@ -189,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Summarize clinically relevant information in a concise history</li>
 <li>Review quality control data and notify the fellow on service of any cases that don’t meet target thresholds</li>
 <li>Evaluate and classify individual variants</li>
-<li>Provide a brief clinical interpretation for the overall set of mutations identified</li>
+<li>Provide a brief clinical interpretation for the overall set of variants identified</li>
 <li>Upload case data to CoPath and format the clinical report</li>
 <li>Notify the fellow and/or attending on service of any questions or concerns related to the technical details of the data and/or the clinical interpretation of the case</li>
 </ul>
@@ -222,8 +231,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The first step in reviewing a case is to ensure that the sequencing data meet the validated quality thresholds. These data are included at the top of each <code>*report.txt</code> file along with reference ranges:</p>
 <table class="table">
 <colgroup>
-<col style="width: 68%">
-<col style="width: 31%">
+<col style="width: 67%">
+<col style="width: 32%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -294,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>The most important metrics to focus on are <code>COVERAGE SUMMARY: Average alignment coverage over target region</code>, <code>COVERAGE SUMMARY: Target bases &gt;250x (%)</code>, and <code>MAPPING/ALIGNING SUMMARY: Total bases (Gbp)</code>. For a new diagnosis, mean coverage needs to be &gt;1,000x and &gt;96% of the target space needs to acheive &gt;250x coverage. For a negative MRD case, mean coverage needs to be &gt;2,500x, and positions with previously identified mutations need to be covered at &gt;2,500x.</p>
+<p>The most important metrics to focus on are <code>COVERAGE SUMMARY: Average alignment coverage over target region</code>, <code>COVERAGE SUMMARY: Target bases &gt;250x (%)</code>, and <code>MAPPING/ALIGNING SUMMARY: Total bases (Gbp)</code>. For a new diagnosis, mean coverage needs to be &gt;1,000x and &gt;96% of the target space needs to acheive &gt;250x coverage. For a negative MRD case, mean coverage needs to be &gt;2,500x, and positions with previously identified varaints need to be covered at &gt;2,500x.</p>
 <p>Cases that don’t meet the mean coverage and/or coverage breadth targets and also don’t have adequate total bases may benefit from additional sequencing of the existing library. Cases that don’t meet the mean coverage and/or coverage breadth targets and do have adequate total sequencing may indicate a failed sequencing library, requiring a new library to be made and/or an alternative specimen to be analyzed.</p>
 <p>It is also important to review the haplotect summary for every case:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">***</span> Haplotect Contamination Estimate <span class="pp">***</span></span>
@@ -317,7 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Here, corresponding means from the same bone marrow biopsy, if applicable. You will also need to review prior MyeloSeq and cytogenetic studies to determine which variants are being followed in patients who are being monitored. In addition, it can be helpful to check for measurable residual disease testing performed by flow cytometry and/or the results of STR identity testing in patients who have received allogeneic hematopoietic cell transplants, but these data generally do not need to be included in the history unless there are specific points of confusion they address.</p>
 <p>In general, the following structure is appropriate for most cases:</p>
-<p><em>(##)-year-old (man|woman) with a history of (myeloid neoplasm (diagnosed YYYY-MM-DD) with [a normal karyotype|a complex karyotype|{short list of cytogenetic abnormalities}] [and mutations in {gene list}]), who (is currently being treated and|is status post hematopoietic cell transplant (YYYY-MM-DD) and) (presents for evaluation|presents for treatment|presents for follow up). Corresponding bone marrow biopsy (S##-####) shows (top-line diagnosis). Corresponding cytogenetic studies (G##-####) show ({list of FISH findings}|karyotype|no evidence of clonal aberrations). Corresponding ChromoSeq study (W##-###) (did not identify any copy number alterations, structural variants, or gene mutations|showed {list of variants}).</em></p>
+<p><em>(##)-year-old (man|woman) with a history of (myeloid neoplasm (diagnosed YYYY-MM-DD) with [a normal karyotype|a complex karyotype|{short list of cytogenetic abnormalities}] [and varaints in {gene list}]), who (is currently being treated and|is status post hematopoietic cell transplant (YYYY-MM-DD) and) (presents for evaluation|presents for treatment|presents for follow up). Corresponding bone marrow biopsy (S##-####) shows (top-line diagnosis). Corresponding cytogenetic studies (G##-####) show ({list of FISH findings}|karyotype|no evidence of clonal aberrations). Corresponding ChromoSeq study (W##-###) (did not identify any copy number alterations, structural variants, or gene variants|showed {list of variants}).</em></p>
 </section>
 <section id="variant-review" class="level3">
 <h3 class="anchored" data-anchor-id="variant-review">Variant Review</h3>
@@ -338,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The current version of the reporting tool classifies individual variants as pathogenic or of uncertain significance based on whether they have been reported by one of several high-quality sequencing studies involving large cohorts of patients with myeloid neoplasms. We have modified this classification for our clinical reports, but this action is not yet supported within the reporting tool. Therefore, variant classifications have to be manually updated after exporting the data from the reporting tool. Please ask the fellows for a current version of the variant classification standard operating procedure for details regarding the variant classification rules. Briefly, variants should be classified as one of:</p>
 <ul>
 <li><code>Potentially therapeutic</code>: variant associated with an FDA-approved targeted therapy (<em>FLT3</em>-ITD, <em>IDH1</em> R132, <em>IDH2</em> R140, and <em>IDH2</em> R172)</li>
-<li><code>Pathogenic</code>: not potentially therapeutic and previously reported by high quality sequencing studies of patients with myeloid neoplasms or a recurrent class of mutations in patients with myeloid neoplasms as defined by National Comprehensive Cancer Network (NCCN) guidelines</li>
+<li><code>Pathogenic</code>: not potentially therapeutic and previously reported by high quality sequencing studies of patients with myeloid neoplasms or a recurrent class of variants in patients with myeloid neoplasms as defined by National Comprehensive Cancer Network (NCCN) guidelines</li>
 <li><code>Possibly donor-derived</code>: not potentially therapeutic or pathogenic, found at a VAF of 35%–65% in a patient after hematopoietic cell transplantation</li>
 <li><code>Possibly germline</code>: not potentially therapeutic or pathogenic, found at a VAF of 35%–65% in a patient with no history of hematopoietic cell transplantation</li>
 <li><code>Uncertain</code>: all other variants</li>
@@ -346,26 +355,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="case-interpretation" class="level3">
 <h3 class="anchored" data-anchor-id="case-interpretation">Case Interpretation</h3>
-<p>The goal of the case interpretation is to summarize the clinical significance of the overall set of mutations observed in the case with an emphasis on their collective implications for diagnosis, treatment, and risk stratification.</p>
+<p>The goal of the case interpretation is to summarize the clinical significance of the overall set of variants observed in the case with an emphasis on their collective implications for diagnosis, treatment, and risk stratification.</p>
 <p>For new diagnoses of myelodysplastic syndrome and acute myeloid leukemia, this should include the disease classification according to the <a href="https://pubmed.ncbi.nlm.nih.gov/35767897/">International Consensus Classification (ICC)</a> critera as well as <a href="https://pubmed.ncbi.nlm.nih.gov/35732831/">the 5th edition of the World Health Organization Classification of Haematolymphoid Tumours (WHO-HAEM5)</a> when possible. In addition, an overall risk stratification consistent with the <a href="https://www.nccn.org/guidelines/category_1">National Comprehensive Cancer Network (NCCN)</a> guidelines should be provided for new diagnoses.</p>
 <p>Examples:</p>
 <ul>
-<li><p><em>Mutations in PTPN11, RUNX1, and U2AF1 are identified. This case is best classified as acute myeloid leukemia with myelodysplasia-related gene mutations by International Consensus Classification (ICC) criteria or acute myeloid leukaemia, myelodysplasia-related by the 5th edition of the World Health Organization Classification of Haematolymphoid Tumours (WHO-HAEM5). The overall constellation of mutations is consistent with high risk acute myeloid leukemia by National Comprehensive Cancer Network (NCCN) guidelines.</em></p></li>
-<li><p><em>A TP53 c.713G&gt;A (p.C238Y) mutation is identified. This case is best classified as myelodysplastic syndrome with mutated TP53 by International Consensus Classification (ICC) criteria, or myelodysplastic neoplasm with biallelic TP53 inactivation by the 5th edition of the World Health Organization Classification of Hematolymphoid Tumors (WHO-HAEM5). The overall constellation of mutations is consistent with high risk myelodysplastic syndrome.</em></p></li>
+<li><p><em>Variants in PTPN11, RUNX1, and U2AF1 are identified. This case is best classified as acute myeloid leukemia with myelodysplasia-related gene mutations by International Consensus Classification (ICC) criteria or acute myeloid leukaemia, myelodysplasia-related by the 5th edition of the World Health Organization Classification of Haematolymphoid Tumours (WHO-HAEM5). The overall constellation of variants is consistent with high risk acute myeloid leukemia by National Comprehensive Cancer Network (NCCN) guidelines.</em></p></li>
+<li><p><em>A TP53 c.713G&gt;A (p.C238Y) variant is identified. This case is best classified as myelodysplastic syndrome with mutated TP53 by International Consensus Classification (ICC) criteria, or myelodysplastic neoplasm with biallelic TP53 inactivation by the 5th edition of the World Health Organization Classification of Hematolymphoid Tumors (WHO-HAEM5). The overall constellation of variants is consistent with high risk myelodysplastic syndrome.</em></p></li>
 </ul>
 <p>For patients who have an existing diagnosis and are being monitored, the interpretation usually consists entirely of an assessment of MRD status, i.e., MRD positive or MRD negative.</p>
 <p>Examples:</p>
 <ul>
-<li><p><em>Previously identified mutations in FLT3 and IDH1 are again seen, consistent with persistent molecular disease (measurable residual disease [MRD] positive). There is evidence of significant chimerism.</em></p></li>
-<li><p><em>Previously identified mutations in ASXL1, DNMT3A, and TP53 are not seen, consistent with mutation clearance and measurable residual disease (MRD) negative status at a sensitivity of at least 0.1%. Overall quality control metrics are within normal limits. There is no evidence of significant chimerism.</em></p></li>
-<li><p><em>Previously identified leukemia-associated mutations in CEBPA, FLT3, NPM1, and WT1 are not seen, consistent with mutation clearance and measurable residual disease (MRD) negative status at a sensitivity of at least 0.1%. Overall quality control metrics are within normal limits. We note that a TET2 c.3409+1G&gt;T mutation is again seen at a reduced variant allele fraction compared to this patient’s prior study. Persistent TET2 mutations after treatment are not associated with an increased risk of relapse in patients with acute myeloid leukemia (PMID: 29601269).</em></p></li>
+<li><p><em>Previously identified variants in FLT3 and IDH1 are again seen, consistent with persistent molecular disease (measurable residual disease [MRD] positive). There is evidence of significant chimerism.</em></p></li>
+<li><p><em>Previously identified variants in ASXL1, DNMT3A, and TP53 are not seen, consistent with mutation clearance and measurable residual disease (MRD) negative status at a sensitivity of at least 0.1%. Overall quality control metrics are within normal limits. There is no evidence of significant chimerism.</em></p></li>
+<li><p><em>Previously identified leukemia-associated variants in CEBPA, FLT3, NPM1, and WT1 are not seen, consistent with mutation clearance and measurable residual disease (MRD) negative status at a sensitivity of at least 0.1%. Overall quality control metrics are within normal limits. We note that a TET2 c.3409+1G&gt;T variant is again seen at a reduced variant allele fraction compared to this patient’s prior study. Persistent TET2 variants after treatment are not associated with an increased risk of relapse in patients with acute myeloid leukemia (PMID: 29601269).</em></p></li>
 </ul>
 <p>For patients who have received an allogeneic hematopoeitic cell transpant, we generally describe haplotect contamination estimates of 2%–5% as evidence low-level chimerism and estimates &gt;5% as evidence of significant chimerism.</p>
-<p>MyeloSeq is also ordered on peripheral blood specimens for patients with chronic unexplained cytopenias, particularly in the outpatient setting. Detecting mutations in these patients demonstrates they have clonal hematopoiesis, but it is generally not sufficient to establish a specific diagnosis, which usually requires a bone marrow biopsy.</p>
+<p>MyeloSeq is also ordered on peripheral blood specimens for patients with chronic unexplained cytopenias, particularly in the outpatient setting. Detecting variants in these patients demonstrates they have clonal hematopoiesis, but it is generally not sufficient to establish a specific diagnosis, which usually requires a bone marrow biopsy.</p>
 <p>Examples:</p>
 <ul>
-<li><p><em>Mutations in BCOR and DNMT3A are identified, consistent with the diagnosis of a myeloid neoplasm. The differential diagnosis includes clonal cytopenia of undetermined significance (CCUS) and myelodysplastic syndrome (MDS). A bone marrow biopsy is required for further evaluation.</em></p></li>
-<li><p><em>No mutations are identified. Overall quality control metrics are within normal limits. The absence of a mutation detectable with this assay does not rule out a diagnosis of myelodysplastic syndrome.</em></p></li>
+<li><p><em>Variants in BCOR and DNMT3A are identified, consistent with the diagnosis of a myeloid neoplasm. The differential diagnosis includes clonal cytopenia of undetermined significance (CCUS) and myelodysplastic syndrome (MDS). A bone marrow biopsy is required for further evaluation.</em></p></li>
+<li><p><em>No variants are identified. Overall quality control metrics are within normal limits. The absence of a variant detectable with this assay does not rule out a diagnosis of myelodysplastic syndrome.</em></p></li>
 </ul>
 </section>
 <section id="uploading-cases-to-copath" class="level3">
@@ -485,6 +494,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -551,13 +587,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -636,10 +674,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -649,8 +704,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -662,7 +726,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -706,6 +893,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -731,6 +919,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -791,6 +1005,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
