@@ -119,7 +119,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#quick-tips" id="toc-quick-tips" class="nav-link" data-scroll-target="#quick-tips">Quick Tips</a></li>
   <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#reporting-tool" id="toc-reporting-tool" class="nav-link" data-scroll-target="#reporting-tool">Reporting Tool</a></li>
+  <li><a href="#reporting-tool" id="toc-reporting-tool" class="nav-link" data-scroll-target="#reporting-tool">Reporting Tool</a>
+  <ul class="collapse">
   <li><a href="#case" id="toc-case" class="nav-link" data-scroll-target="#case">Case</a></li>
   <li><a href="#qc" id="toc-qc" class="nav-link" data-scroll-target="#qc">QC</a></li>
   <li><a href="#variants" id="toc-variants" class="nav-link" data-scroll-target="#variants">Variants</a></li>
@@ -128,6 +129,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tmbmsi" id="toc-tmbmsi" class="nav-link" data-scroll-target="#tmbmsi">TMB/MSI</a></li>
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
   <li><a href="#pdf" id="toc-pdf" class="nav-link" data-scroll-target="#pdf">PDF</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -156,13 +158,13 @@ ul.task-list li input[type="checkbox"] {
 
 <style>title {text-align: left}</style>
 <style>body {text-align: justify}</style>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><a href="https://pathologyservices.wustl.edu/items/gatewayseq-ngs-panel-with-interpretation/">GatewaySeq</a> is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks or smear slides from fine-needle aspirations) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.</p>
 <p>GatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). GatewaySeq is ordered reflexively by the surgical pathologist for all new diagnoses of non-squamous, non-small cell lung cancer as well as metastatic breast cancer and gastrointestinal stromal tumors (GISTs).</p>
 </section>
-<section id="quick-tips" class="level3">
-<h3 class="anchored" data-anchor-id="quick-tips">Quick Tips</h3>
+<section id="quick-tips" class="level2">
+<h2 class="anchored" data-anchor-id="quick-tips">Quick Tips</h2>
 <ul>
 <li><strong>Read this entire document and refer to it while templating cases</strong></li>
 <li><strong>Review examples of previous cases, especially interpretations (this can be done using the GatewaySeq reporting tool)</strong></li>
@@ -171,8 +173,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>You must click <code>Save JSON</code> within the <code>PDF</code> tab to save your work; none of your changes are saved until you click this button; if you return to the <code>Orders</code> tab or close your browser window before clicking <code>Save JSON</code>, your changes will be lost</strong></li>
 </ul>
 </section>
-<section id="workflow" class="level3">
-<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
 <p>GatewaySeq is currently run twice per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday and Friday, and data are typically available for analysis Wednesday and Sunday morning. Case assignments are distributed via email by the molecular pathology coordinators on Friday. <strong>Trainees review the sequencing data and template clinical reports for sign out by 1300 on Monday and Wednesday</strong> afternoons. Briefly, trainees are expected to:</p>
 <ul>
 <li>Review the clinical history, especially the corresponding and historical pathology case(s), and incorporate those findings into the case interpretation</li>
@@ -186,8 +188,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Review the case with sign out faculty and make revisions as needed</li>
 </ul>
 </section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The complete set of files for each case are stored on the Research Infrastructure Services (RIS) cluster (ris.wustl.edu). The subset of files needed to interpret most cases are copied to the Department of Pathology server (pathfiles.wustl.edu). You do not need to routinely access these files directly to template cases; most of this information is available within the reporting tool. However, if you need to investigate individual variants or otherwise need access to data not included in the reporting tool, these files are available.</p>
 <p>To connect to the department server on a Windows computer, use the File Explorer application:</p>
 <ul>
@@ -211,10 +213,9 @@ ul.task-list li input[type="checkbox"] {
 <li><code>*report.txt</code>: case report json file</li>
 </ul>
 </section>
-<section id="reporting-tool" class="level3">
-<h3 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h3>
+<section id="reporting-tool" class="level2">
+<h2 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h2>
 <p>The <a href="https://mopath.wustl.edu/gatewayseq/">GatewayReporter</a> tool is a web-based JavaScript application used to prepare GatewaySeq clinical reports. This tool reads data from the .json files associated with each case. The landing page (<code>Orders</code> tab) presents a dashboard of pending and completed cases (completed cases can be viewed by de-selecting <code>Hide Final orders</code>). Clicking on an individual <code>orderid</code> in this table allows you to enter and review and/or edit a specific case. You can then work through all of the components of the case by moving left to right across the tabs in the reporting tool (<code>Case</code>, <code>QC</code>, <code>Variants</code>, <code>CNV</code>, <code>Fusions</code>, <code>TMB/MSI</code>, <code>Interpretation</code>, <code>PDF</code>, and <code>JSON</code>).</p>
-</section>
 <section id="case" class="level3">
 <h3 class="anchored" data-anchor-id="case">Case</h3>
 <p><strong>Patient Information</strong></p>
@@ -290,8 +291,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Do not click <code>Save JSON + ProcessPdf</code>. This should only be clicked by the sign out pathologist.</strong> Clicking on this button finalizes the case and sends it to CoPath, preventing further changes without issuing an amended report.</p>
 <p><strong>You must click <code>Save JSON</code> to save your work (across all tabs).</strong> After clicking this, the next time the case is loaded from the <code>Orders</code> tab, the case will load with the updated information.</p>
 </section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 <section id="general" class="level4">
 <h4 class="anchored" data-anchor-id="general">General</h4>
 <ul>
