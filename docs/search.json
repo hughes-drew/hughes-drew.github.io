@@ -77,90 +77,6 @@
     "text": "I’m an Assistant Professor in the Department of Pathology & Immunology at Washington University School of Medicine. My clinical responsibilities include signing out next-generation sequencing assays for both solid and liquid tumors:\n\nChromoSeq\nGatewaySeq\nMyeloSeq\n\nMy research interests include technology development to support clinical next-generation sequencing, including applications of machine learning to genomic data, bioinformatic method development, and liquid biopsy."
   },
   {
-    "objectID": "intro_to_gatewayseq.html",
-    "href": "intro_to_gatewayseq.html",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "",
-    "text": "GatewaySeq is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks or smear slides from fine-needle aspirations) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.\nGatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). GatewaySeq is ordered reflexively by the surgical pathologist for all new diagnoses of non-squamous, non-small cell lung cancer as well as metastatic breast cancer and gastrointestinal stromal tumors (GISTs)."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Introduction to ChromoSeq for Trainees\nIntroduction to MyeloSeq for Trainees\nIntroduction to GatewaySeq for Trainees"
-  },
-  {
-    "objectID": "resources.html#clinical-teaching",
-    "href": "resources.html#clinical-teaching",
-    "title": "Resources",
-    "section": "",
-    "text": "Introduction to ChromoSeq for Trainees\nIntroduction to MyeloSeq for Trainees\nIntroduction to GatewaySeq for Trainees"
-  },
-  {
-    "objectID": "intro_to_gatewayseq.html#overview",
-    "href": "intro_to_gatewayseq.html#overview",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "",
-    "text": "GatewaySeq is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks or smear slides from fine-needle aspirations) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.\nGatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). GatewaySeq is ordered reflexively by the surgical pathologist for all new diagnoses of non-squamous, non-small cell lung cancer as well as metastatic breast cancer and gastrointestinal stromal tumors (GISTs)."
-  },
-  {
-    "objectID": "intro_to_gatewayseq.html#quick-tips",
-    "href": "intro_to_gatewayseq.html#quick-tips",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "Quick Tips",
-    "text": "Quick Tips\n\nRead this entire document and refer to it while templating cases\nReview examples of previous cases, especially interpretations (this can be done using the GatewaySeq reporting tool)\nAlways incorporate the clinical and pathological context into the interpretation of individual variants as well as the overall case\nNever click Save JSON + ProcessPdf within the PDF tab; this is for the sign out pathologist only\nYou must click Save JSON within the PDF tab to save your work; none of your changes are saved until you click this button; if you return to the Orders tab or close your browser window before clicking Save JSON, your changes will be lost"
-  },
-  {
-    "objectID": "intro_to_gatewayseq.html#workflow",
-    "href": "intro_to_gatewayseq.html#workflow",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "Workflow",
-    "text": "Workflow\nGatewaySeq is currently run twice per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday and Friday, and data are typically available for analysis Wednesday and Sunday morning. Case assignments are distributed via email by the molecular pathology coordinators on Friday. Trainees review the sequencing data and template clinical reports for sign out by 1300 on Monday and Wednesday afternoons. Briefly, trainees are expected to:\n\nReview the clinical history, especially the corresponding and historical pathology case(s), and incorporate those findings into the case interpretation\nReview any previous molecular testing performed on the same or related sample(s) (cytogenetics, external next-generation sequencing, etc.) and compare to GatewaySeq results\nReview quality control data and notify the attending of any cases that don’t meet target thresholds\nEvaluate and classify individual small variants, CNAs, and SVs\nCompose a brief interpretation for each clinically significant variant\nVerify classification of MSI and TMB\nCompose a brief interpretation summarizing key results for the overall case\nSave the updated data within the GatewaySeq reporting tool\nReview the case with sign out faculty and make revisions as needed"
-  },
-  {
-    "objectID": "intro_to_gatewayseq.html#data",
-    "href": "intro_to_gatewayseq.html#data",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "Data",
-    "text": "Data\nThe complete set of files for each case are stored on the Research Infrastructure Services (RIS) cluster (ris.wustl.edu). The subset of files needed to interpret most cases are copied to the Department of Pathology server (pathfiles.wustl.edu). You do not need to routinely access these files directly to template cases; most of this information is available within the reporting tool. However, if you need to investigate individual variants or otherwise need access to data not included in the reporting tool, these files are available.\nTo connect to the department server on a Windows computer, use the File Explorer application:\n\nRight click on This PC and select Map network drive...\nType \\\\pathfiles.wustl.edu\\AMP\\Genomics\\GatewaySeq into the Folder box and click Finish\n\nTo access data on a Mac, use the Finder application:\n\nSelect Go → Connect to Server from the menu bar (or press ⌘K)\nType smb://pathfiles.wustl.edu/AMP/Genomics/GatewaySeq into the Server Address box and click Connect\n\nCases are organized on the department server by batch. Each batch directory contains a separate folder for each case as well as a TSV file summarizing the quality control metrics for all cases (QC_metrics.tsv). Each case folder contains the following files:\n\n*annotated.vcf.gz: variant call format file of all potentially reportable small variants detected by the analysis pipeline\n*annotated.vcf.gz.tbi: small variant VCF index\n*sv_annotated.vcf.gz: variant call format file of all potentially reportable structural variants detected by the analysis pipeline\n*sv_annotated.vcf.gz.tbi: structural variant VCF index\ndragen/*cram: alignment file\ndragen/*cram.crai: alignment index\n*report.json: case report text file`\n*report.txt: case report json file"
-  },
-  {
-    "objectID": "intro_to_gatewayseq.html#reporting-tool",
-    "href": "intro_to_gatewayseq.html#reporting-tool",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "Reporting Tool",
-    "text": "Reporting Tool\nThe GatewayReporter tool is a web-based JavaScript application used to prepare GatewaySeq clinical reports. This tool reads data from the .json files associated with each case. The landing page (Orders tab) presents a dashboard of pending and completed cases (completed cases can be viewed by de-selecting Hide Final orders). Clicking on an individual orderid in this table allows you to enter and review and/or edit a specific case. You can then work through all of the components of the case by moving left to right across the tabs in the reporting tool (Case, QC, Variants, CNV, Fusions, TMB/MSI, Interpretation, PDF, and JSON).\n\nCase\nPatient Information\n\nThe patient Name, Date Of Birth, Sex, MRN, and CoPath Accession Number are populated directly from Copath; verify these for accuracy\nOrdering Physician: the attending physician on the associated Epic order or the ordering pathologist for orders placed by pathology (Epic requisitions and/or histology orders are scanned into the Image Gallery in CoPath)\n\nSpecimen Information\n\nTumor Origin: select from dropdown\nSpecimen Site, Corresponding Specimen Number, and Specimen Collected Date: enter based on corresponding surgical or cytology case\nBlock number: enter from histology order\nTumor cellularity: enter from histology order; if not listed, ask the Molecular Coordinators to pull the case to assess tumor cellularity\n\nDiagnostic Information\n\nStated Diagnosis: enter from corresponding surgical or cytology case\nDiagnostic Timepoint, Histologic Grade, T stage, N stage, M stage, and AJCC/FIGO Stage Group: select from dropdown based on corresponding surgical or cytology case; if information is not known, select NA\n\n\n\nQC\nCases with any of QC metrics outside of the reference range may require additional sequencing, preparation of new sequencing libraries, or submission of alternative specimens. Any cases that do not meet QC metrics should be brought to the attention of the sign out pathologist as soon as possible. In certain cases (e.g. no additional material), the pathologist may choose to sign out cases that do not meet QC metrics as exceptions and issue a limited report (SNVs and indels only).\n\nMapping/Aligning Summary: sequencing yield, read quality, alignment rate, and insert size\nCoverage Summary: on-target rate, on-target coverage\nUMI Summary: percentage of duplicate reads (reflects complexity of input material/number of distinct input molecules)\nFailed Exon QC: small variant target regions that did not have adequate mean coverage or an adequate proportion of target bases covered at &gt;100x or &gt;250x\nGene Coverage QC: mean coverage, proportion of target bases covered at &gt;100x, and proportion of target bases covered at &gt;250x for every gene on the panel\nFusion Coverage QC: fusion target regions that did not have adequate mean coverage or an adequate proportion of target bases covered at &gt;100x or &gt;250x\nMSI/Haplotect coverage QC: MSI and haplotect target regions that did not have adequate mean coverage or an adequate proportion of target bases covered at &gt;100x or &gt;250x\nHaplotect summary: haplotect is an algorithm that analyzes known polymorphic sites in the genome to quantitatively estimate sample contamination (i.e., evidence of the presence of DNA from more than one individual in the sequencing data); if the contamination estimate is greater than 0.04 with &gt;1 informative site, there is evidence of potential contamination, which must be accounted for during the interpretation, and/or a new specimen or new library may be needed\n\n\n\nVariants\nVariant classification and interpretation are based on the AMP/ASCO/CAP guidelines for reporting sequence variants in cancer (PMID: 27993330). Tier 1 and 2 variants are classified as Significant and Tier 3 variants are classified as Variants of Uncertain Significance (VUS). Tier 4 variants are not reported.\nVariants that pass all internal QC filters are listed in the PASS table. Variants in genes with potential clinical significance for each tumor type (based on the data entered on the Case tab) are classified as Significant by default. Review these classifications to ensure that variants classified as Significant meet criteria for Tier 1 or 2 variants and that variants classified as VUS do not (use the checkboxes to update the Diagnostic, Prognostic, Therapeutic, and Oncogenic/Likely Oncogenic classifications as needed). Note that our internal reporting policy is to classify Oncogenic/Likely Oncogenic variants as Tier 2. Additional information for each variant, including links to external databases, can be viewed by clicking on the ⋁ symbol. The majority of Tier 4 variants are automatically filtered from the report based on their frequency in the general population (filtering frequency &gt;0.1%); however, the annotation and comparison of multinucleotide variants to population databases in particular is error-prone and should be double-checked to ensure that Tier 4 variants aren’t mistakenly reported as VUS.\nVariants that are below the validated LOD (5% VAF) or that fail other quality filters are listed in the Filtered table. Variants included here should rarely be reported. The primary exceptions are 1) variants that represent a nucleotide change that is identical to a variant that was previously reported in the same patient by orthogonal testing and whose only Filter flag is LowReads, and 2) variants with strong clinical significance that are just below the LOD and whose only Filter flag is LowReads (e.g., an EGFR exon 21 variant at a VAF of 4.8% in a lung cancer specimen with low tumor cellularity).\n\n\nCNV\nCopy number variants (CNVs) with copy ratios ≥2.0 (gain) or ≤0.5 (loss) are reported. Occasionally, CNVs will be listed in the Filtered table with a high/low copy ratio but whose only filter is cnvLength; these should usually be promoted to significant and included in the report.\n\n\nFusions\nFusions in the PASS table should usually be reported. Fusions listed in the Filtered table should be manually reviewed by BLATing the contig to ensure it represents a clean junction between two segments of high-quality sequence with high-quality alignments. Filtered fusion calls with only single read support (NoPairedReads flag and PR_READS=0 in the Info field) are usually artifacts.\n\n\nTMB/MSI\nNon-synonymous TMB (mutations/Mb) is reported with a categorization: low (0–10 mutations/Mb), intermediate (11–20 mutations/Mb), and high (&gt;20 mutations/Mb).\nCases with PercentageUnstableSites &lt;20 are classified as microsatellite stable (MSS) and cases with PercentageUnstableSites ≥20 are classified as microsatellite instability high (MSI-H). If ResultIsValid is false, there is a technical problem with the MSI analysis and the sign out pathologist should be notified.\n\n\nInterpretation\nStandardized comments and interpretations can be found in the Box folder under GWSeq Trainee Resources/interpretation/interpretations.docx.\nClinically Significant Genes with No Detected Variants\nThis section is automatically generated based on the tumor type and the variants selected as significant.\nInterpretation for Clinically Significant Variants\nEach variant that was selected as Significant in the Variants tab will appear here. At least one of the four significance categories should be selected (Diagnostic, Prognostic, Therapeutic, and/or Oncogenic/Likely Oncogenic).\nThe reporting tool includes disease-specific interpretations from Memorial Sloan Kettering Cancer Center’s precision oncology knowledge base, OncoKB, for each variant. Use the dropdowns to expand the tree under the OncoKB column and select the appropriate disease and click on the green text to pull comments into the Interpretation field. The comments entered for geneSummary, variantSummary, and tumorTypeSummary should generally be included in the interpretation and revised as needed. Please italicize all gene names by placing them inside asterisks (e.g., *EGFR*). Regarding variants with potential therapeutic significance, our current policy is to include FDA-approved and/or NCCN-compendium listed treatments (i.e., not investigational agents) in the written interpretation. If there is an approved treatment for a variant but for a different tumor type, these are considered Tier 2 by AMP/ASCO/CAP guidelines, and a comment should be included in the variant-specific interpretation field. However, our policy is NOT to check Therapeutic for these variants or comment on the association in the Overall Interpretation field.\nThe OncoKB annotations typically provide high quality information for recurrent variants/variant types in key genes, but additional investigation is needed to interpret less well-characterized variants. The following resources may be helpful in those cases: Pubmed, Franklin, COSMIC, and CIViC.\nInterpretation for CNAs and Gene Fusions\nSimilar to the interpretations for individual small variants, interpretations for CNAs or Fusions included in the report should be entered here. These fields are not prepopulated with OncoKB annotations; however, the OncoKB web portal provides information for many of the recurrent CNAs and Fusions that are detected by GatewaySeq and may be a helpful resource when collecting data about these variants.\nOverall interpretation\nProvide a brief (2–3 sentence) summary of the entire case. The goal of the overall interpretation is to summarize the clinical significance of variants observed with an emphasis on implications for diagnosis, prognosis, and treatment. In particular, variants associated with FDA-approved or NCCN-recommended treatments, including TMB-H, should be stated here. Relevant negatives can also be included here, especially when the provider has indicated they are interested in the presence or absence of specific variants.\nFor cases with no variants that provide diagnostic, prognostic, or therapeutic information, we generally provide the following comment:\nNo variants associated with FDA-approved or NCCN compendium-listed treatments for patients with [tumor type] are identified. Overall quality control metrics are within normal limits.\n\n\nPDF\nAfter the QC review is complete and the case data and variant interpretations have been entered, selecting the PDF tab renders a preview of the final PDF report. Proofread this draft carefully; it is identical to the report that will appear in CoPath and Epic. Return to relevant tabs to make any necessary edits, and then return to the PDF tab to review any changes and save your work.\nDo not click Save JSON + ProcessPdf. This should only be clicked by the sign out pathologist. Clicking on this button finalizes the case and sends it to CoPath, preventing further changes without issuing an amended report.\nYou must click Save JSON to save your work (across all tabs). After clicking this, the next time the case is loaded from the Orders tab, the case will load with the updated information."
-  },
-  {
-    "objectID": "intro_to_gatewayseq.html#references",
-    "href": "intro_to_gatewayseq.html#references",
-    "title": "GatewaySeq: Introduction for Trainees",
-    "section": "References",
-    "text": "References\n\nGeneral\n\nNational Comprehensive Cancer Network (NCCN) Guidelines\nOncoKB\n\n\n\nEndometrial Cancer\n\n\nLymphoma\n\nde Leval L et al. Genomic profiling for clinical decision making in lymphoid neoplasms. Blood. 2022 Nov 24;140(21):2193-2227. PMID: 36001803.\nNann D et al. Follicular lymphoma t(14;18)-negative is genetically a heterogeneous disease. Blood Adv. 2020 Nov 24;4(22):5652-5665. PMID: 33211828.\nSalaverria I et al. The clinical and molecular taxonomy of t(14;18)-negative follicular lymphomas. Blood Adv. 2023 Sep 26;7(18):5258-5271. PMID: 37561599.\nSánchez-Beato M et al. A genetic profiling guideline to support diagnosis and clinical management of lymphomas. Clin Transl Oncol. 2023 Sep 6. PMID: 37672206."
-  },
-  {
-    "objectID": "resources.html#clinical-service",
-    "href": "resources.html#clinical-service",
-    "title": "Resources",
-    "section": "",
-    "text": "Introduction to ChromoSeq for Trainees\nIntroduction to MyeloSeq for Trainees\nIntroduction to GatewaySeq for Trainees"
-  },
-  {
-    "objectID": "resources.html#slides",
-    "href": "resources.html#slides",
-    "title": "Resources",
-    "section": "Slides",
-    "text": "Slides\nIntroduction to MyeloSeq"
-  },
-  {
     "objectID": "myeloseq_slides.html#myeloseq",
     "href": "myeloseq_slides.html#myeloseq",
     "title": "Introduction for Trainees",
@@ -280,122 +196,80 @@
     "text": "Resources\n\n\nGenomic profiling for clinical decision making in myeloid neoplasms and acute leukemia (PMID: 36130297)\nInternational Consensus Classification (PMID: 35767897)\nWHO Classification (PMID: 35732831)\nNCCN Guidelines: treatment by cancer type (AML, MDS, MPN)\nOncoKB\nFranklin\nUCSC Genome Browser\nMolecular in My Pocket reference cards (AMP)"
   },
   {
-    "objectID": "slides_myeloseq.html#myeloseq",
-    "href": "slides_myeloseq.html#myeloseq",
-    "title": "Introduction for Trainees",
-    "section": "MyeloSeq",
-    "text": "MyeloSeq\n\n\nTargeted sequencing panel for patients with myeloid neoplasms (MDS, MPN, MDS/MPN, AML)\nIndications: new diagnosis or measurable residual disease (MRD) assessment\nReportable range: single nucleotide variants (SNVs) and small insertions and deletions (indels) in 55 genes\nTarget genes clinically relevant for diagnosis, risk stratification, and targeted therapies\nLimit of detection: ≥2% VAF (new diagnosis) or ≥0.1% VAF (MRD)"
+    "objectID": "intro_to_gatewayseq.html",
+    "href": "intro_to_gatewayseq.html",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "",
+    "text": "GatewaySeq is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks or smear slides from fine-needle aspirations) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.\nGatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). GatewaySeq is ordered reflexively by the surgical pathologist for all new diagnoses of non-squamous, non-small cell lung cancer as well as metastatic breast cancer and gastrointestinal stromal tumors (GISTs)."
   },
   {
-    "objectID": "slides_myeloseq.html#recurrent-alterations-in-mds-and-aml",
-    "href": "slides_myeloseq.html#recurrent-alterations-in-mds-and-aml",
-    "title": "Introduction for Trainees",
-    "section": "Recurrent Alterations in MDS and AML",
-    "text": "Recurrent Alterations in MDS and AML\n\nOgawa S. 2019. PMID: 30670442."
+    "objectID": "intro_to_gatewayseq.html#overview",
+    "href": "intro_to_gatewayseq.html#overview",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "",
+    "text": "GatewaySeq is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks or smear slides from fine-needle aspirations) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.\nGatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). GatewaySeq is ordered reflexively by the surgical pathologist for all new diagnoses of non-squamous, non-small cell lung cancer as well as metastatic breast cancer and gastrointestinal stromal tumors (GISTs)."
   },
   {
-    "objectID": "slides_myeloseq.html#ipss-m-mds-risk-calculator",
-    "href": "slides_myeloseq.html#ipss-m-mds-risk-calculator",
-    "title": "Introduction for Trainees",
-    "section": "IPSS-M MDS Risk Calculator",
-    "text": "IPSS-M MDS Risk Calculator\n\nBernard E. 2022. PMID: 38319256."
+    "objectID": "intro_to_gatewayseq.html#quick-tips",
+    "href": "intro_to_gatewayseq.html#quick-tips",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "Quick Tips",
+    "text": "Quick Tips\n\nRead this entire document and refer to it while templating cases\nReview examples of previous cases, especially interpretations (this can be done using the GatewaySeq reporting tool)\nAlways incorporate the clinical and pathological context into the interpretation of individual variants as well as the overall case\nNever click Save JSON + ProcessPdf within the PDF tab; this is for the sign out pathologist only\nYou must click Save JSON within the PDF tab to save your work; none of your changes are saved until you click this button; if you return to the Orders tab or close your browser window before clicking Save JSON, your changes will be lost"
   },
   {
-    "objectID": "slides_myeloseq.html#mds-ouctome-by-ipss-m-risk-group",
-    "href": "slides_myeloseq.html#mds-ouctome-by-ipss-m-risk-group",
-    "title": "Introduction for Trainees",
-    "section": "MDS Ouctome by IPSS-M Risk Group",
-    "text": "MDS Ouctome by IPSS-M Risk Group\n\nCumulative incidence of AML or death\n\nBernard E. 2022. PMID: 38319256."
+    "objectID": "intro_to_gatewayseq.html#workflow",
+    "href": "intro_to_gatewayseq.html#workflow",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "Workflow",
+    "text": "Workflow\nGatewaySeq is currently run twice per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday and Friday, and data are typically available for analysis Wednesday and Sunday morning. Case assignments are distributed via email by the molecular pathology coordinators on Friday. Trainees review the sequencing data and template clinical reports for sign out by 1300 on Monday and Wednesday afternoons. Briefly, trainees are expected to:\n\nReview the clinical history, especially the corresponding and historical pathology case(s), and incorporate those findings into the case interpretation\nReview any previous molecular testing performed on the same or related sample(s) (cytogenetics, external next-generation sequencing, etc.) and compare to GatewaySeq results\nReview quality control data and notify the attending of any cases that don’t meet target thresholds\nEvaluate and classify individual small variants, CNAs, and SVs\nCompose a brief interpretation for each clinically significant variant\nVerify classification of MSI and TMB\nCompose a brief interpretation summarizing key results for the overall case\nSave the updated data within the GatewaySeq reporting tool\nReview the case with sign out faculty and make revisions as needed"
   },
   {
-    "objectID": "slides_myeloseq.html#eln-aml-risk-groups-2022",
-    "href": "slides_myeloseq.html#eln-aml-risk-groups-2022",
-    "title": "Introduction for Trainees",
-    "section": "ELN AML Risk Groups (2022)",
-    "text": "ELN AML Risk Groups (2022)\n\n\n\n\n\n\n\n\nRisk Group\nGenetic Abnormality\n\n\n\n\nFavorable\n\nt(8;21)(q22;q22.1)/RUNX1::RUNX1T1\ninv(16)(p13.1q22) or t(16;16)(p13.1;q22)/CBFB::MYH11\nMutated NPM1 without FLT3-ITD\n\n\n\nIntermediate\n\nMutated NPM1 with FLT3-ITD\nWild-type NPM1 with FLT3-ITD (without adverse-risk lesions)\nt(9;11)(p21.3;q23.3)/MLLT3::KMT2A\nCytogenetic/molecular abnormalities not classified as favorable or adverse\n\n\n\nPoor/adverse\n\nt(6;9)(p23.3;q34.1)/DEK::NUP214\nt(v;11q23.3)/KMT2A-rearranged\nt(9;22)(q34.1;q11.2)/BCR::ABL1\nt(8;16)(p11.2;p13.3)/KAT6A::CREBBP\ninv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2)/GATA2, MECOM(EVI1)\nt(3q26.2;v)/MECOM(EVI1)\n-5 or del(5q); -7; -17/abn(17p)\nComplex karyotype, monosomal karyotype\nMutated ASXL1, BCOR, EZH2, RUNX1, SF3B1, SRSF2, STAG2, U2AF1, and/or ZRSR2\nMutated TP53\n\n\n\n\nDöhner H. 2022. PMID: 35797463."
+    "objectID": "intro_to_gatewayseq.html#data",
+    "href": "intro_to_gatewayseq.html#data",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "Data",
+    "text": "Data\nThe complete set of files for each case are stored on the Research Infrastructure Services (RIS) cluster (ris.wustl.edu). The subset of files needed to interpret most cases are copied to the Department of Pathology server (pathfiles.wustl.edu). You do not need to routinely access these files directly to template cases; most of this information is available within the reporting tool. However, if you need to investigate individual variants or otherwise need access to data not included in the reporting tool, these files are available.\nTo connect to the department server on a Windows computer, use the File Explorer application:\n\nRight click on This PC and select Map network drive...\nType \\\\pathfiles.wustl.edu\\AMP\\Genomics\\GatewaySeq into the Folder box and click Finish\n\nTo access data on a Mac, use the Finder application:\n\nSelect Go → Connect to Server from the menu bar (or press ⌘K)\nType smb://pathfiles.wustl.edu/AMP/Genomics/GatewaySeq into the Server Address box and click Connect\n\nCases are organized on the department server by batch. Each batch directory contains a separate folder for each case as well as a TSV file summarizing the quality control metrics for all cases (QC_metrics.tsv). Each case folder contains the following files:\n\n*annotated.vcf.gz: variant call format file of all potentially reportable small variants detected by the analysis pipeline\n*annotated.vcf.gz.tbi: small variant VCF index\n*sv_annotated.vcf.gz: variant call format file of all potentially reportable structural variants detected by the analysis pipeline\n*sv_annotated.vcf.gz.tbi: structural variant VCF index\ndragen/*cram: alignment file\ndragen/*cram.crai: alignment index\n*report.json: case report text file`\n*report.txt: case report json file"
   },
   {
-    "objectID": "slides_myeloseq.html#aml-outcome-by-eln-risk-group",
-    "href": "slides_myeloseq.html#aml-outcome-by-eln-risk-group",
-    "title": "Introduction for Trainees",
-    "section": "AML Outcome by ELN Risk Group",
-    "text": "AML Outcome by ELN Risk Group\n\nRausch C. 2023. PMID: 37041198."
+    "objectID": "intro_to_gatewayseq.html#reporting-tool",
+    "href": "intro_to_gatewayseq.html#reporting-tool",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "Reporting Tool",
+    "text": "Reporting Tool\nThe GatewayReporter tool is a web-based JavaScript application used to prepare GatewaySeq clinical reports. This tool reads data from the .json files associated with each case. The landing page (Orders tab) presents a dashboard of pending and completed cases (completed cases can be viewed by de-selecting Hide Final orders). Clicking on an individual orderid in this table allows you to enter and review and/or edit a specific case. You can then work through all of the components of the case by moving left to right across the tabs in the reporting tool (Case, QC, Variants, CNV, Fusions, TMB/MSI, Interpretation, PDF, and JSON).\n\nCase\nPatient Information\n\nThe patient Name, Date Of Birth, Sex, MRN, and CoPath Accession Number are populated directly from Copath; verify these for accuracy\nOrdering Physician: the attending physician on the associated Epic order or the ordering pathologist for orders placed by pathology (Epic requisitions and/or histology orders are scanned into the Image Gallery in CoPath)\n\nSpecimen Information\n\nTumor Origin: select from dropdown\nSpecimen Site, Corresponding Specimen Number, and Specimen Collected Date: enter based on corresponding surgical or cytology case\nBlock number: enter from histology order\nTumor cellularity: enter from histology order; if not listed, ask the Molecular Coordinators to pull the case to assess tumor cellularity\n\nDiagnostic Information\n\nStated Diagnosis: enter from corresponding surgical or cytology case\nDiagnostic Timepoint, Histologic Grade, T stage, N stage, M stage, and AJCC/FIGO Stage Group: select from dropdown based on corresponding surgical or cytology case; if information is not known, select NA\n\n\n\nQC\nCases with any of QC metrics outside of the reference range may require additional sequencing, preparation of new sequencing libraries, or submission of alternative specimens. Any cases that do not meet QC metrics should be brought to the attention of the sign out pathologist as soon as possible. In certain cases (e.g. no additional material), the pathologist may choose to sign out cases that do not meet QC metrics as exceptions and issue a limited report (SNVs and indels only).\n\nMapping/Aligning Summary: sequencing yield, read quality, alignment rate, and insert size\nCoverage Summary: on-target rate, on-target coverage\nUMI Summary: percentage of duplicate reads (reflects complexity of input material/number of distinct input molecules)\nFailed Exon QC: small variant target regions that did not have adequate mean coverage or an adequate proportion of target bases covered at &gt;100x or &gt;250x\nGene Coverage QC: mean coverage, proportion of target bases covered at &gt;100x, and proportion of target bases covered at &gt;250x for every gene on the panel\nFusion Coverage QC: fusion target regions that did not have adequate mean coverage or an adequate proportion of target bases covered at &gt;100x or &gt;250x\nMSI/Haplotect coverage QC: MSI and haplotect target regions that did not have adequate mean coverage or an adequate proportion of target bases covered at &gt;100x or &gt;250x\nHaplotect summary: haplotect is an algorithm that analyzes known polymorphic sites in the genome to quantitatively estimate sample contamination (i.e., evidence of the presence of DNA from more than one individual in the sequencing data); if the contamination estimate is greater than 0.04 with &gt;1 informative site, there is evidence of potential contamination, which must be accounted for during the interpretation, and/or a new specimen or new library may be needed\n\n\n\nVariants\nVariant classification and interpretation are based on the AMP/ASCO/CAP guidelines for reporting sequence variants in cancer (PMID: 27993330). Tier 1 and 2 variants are classified as Significant and Tier 3 variants are classified as Variants of Uncertain Significance (VUS). Tier 4 variants are not reported.\nVariants that pass all internal QC filters are listed in the PASS table. Variants in genes with potential clinical significance for each tumor type (based on the data entered on the Case tab) are classified as Significant by default. Review these classifications to ensure that variants classified as Significant meet criteria for Tier 1 or 2 variants and that variants classified as VUS do not (use the checkboxes to update the Diagnostic, Prognostic, Therapeutic, and Oncogenic/Likely Oncogenic classifications as needed). Note that our internal reporting policy is to classify Oncogenic/Likely Oncogenic variants as Tier 2. Additional information for each variant, including links to external databases, can be viewed by clicking on the ⋁ symbol. The majority of Tier 4 variants are automatically filtered from the report based on their frequency in the general population (filtering frequency &gt;0.1%); however, the annotation and comparison of multinucleotide variants to population databases in particular is error-prone and should be double-checked to ensure that Tier 4 variants aren’t mistakenly reported as VUS.\nVariants that are below the validated LOD (5% VAF) or that fail other quality filters are listed in the Filtered table. Variants included here should rarely be reported. The primary exceptions are 1) variants that represent a nucleotide change that is identical to a variant that was previously reported in the same patient by orthogonal testing and whose only Filter flag is LowReads, and 2) variants with strong clinical significance that are just below the LOD and whose only Filter flag is LowReads (e.g., an EGFR exon 21 variant at a VAF of 4.8% in a lung cancer specimen with low tumor cellularity).\n\n\nCNV\nCopy number variants (CNVs) with copy ratios ≥2.0 (gain) or ≤0.5 (loss) are reported. Occasionally, CNVs will be listed in the Filtered table with a high/low copy ratio but whose only filter is cnvLength; these should usually be promoted to significant and included in the report.\n\n\nFusions\nFusions in the PASS table should usually be reported. Fusions listed in the Filtered table should be manually reviewed by BLATing the contig to ensure it represents a clean junction between two segments of high-quality sequence with high-quality alignments. Filtered fusion calls with only single read support (NoPairedReads flag and PR_READS=0 in the Info field) are usually artifacts.\n\n\nTMB/MSI\nNon-synonymous TMB (mutations/Mb) is reported with a categorization: low (0–10 mutations/Mb), intermediate (11–20 mutations/Mb), and high (&gt;20 mutations/Mb).\nCases with PercentageUnstableSites &lt;20 are classified as microsatellite stable (MSS) and cases with PercentageUnstableSites ≥20 are classified as microsatellite instability high (MSI-H). If ResultIsValid is false, there is a technical problem with the MSI analysis and the sign out pathologist should be notified.\n\n\nInterpretation\nStandardized comments and interpretations can be found in the Box folder under GWSeq Trainee Resources/interpretation/interpretations.docx.\nClinically Significant Genes with No Detected Variants\nThis section is automatically generated based on the tumor type and the variants selected as significant.\nInterpretation for Clinically Significant Variants\nEach variant that was selected as Significant in the Variants tab will appear here. At least one of the four significance categories should be selected (Diagnostic, Prognostic, Therapeutic, and/or Oncogenic/Likely Oncogenic).\nThe reporting tool includes disease-specific interpretations from Memorial Sloan Kettering Cancer Center’s precision oncology knowledge base, OncoKB, for each variant. Use the dropdowns to expand the tree under the OncoKB column and select the appropriate disease and click on the green text to pull comments into the Interpretation field. The comments entered for geneSummary, variantSummary, and tumorTypeSummary should generally be included in the interpretation and revised as needed. Please italicize all gene names by placing them inside asterisks (e.g., *EGFR*). Regarding variants with potential therapeutic significance, our current policy is to include FDA-approved and/or NCCN-compendium listed treatments (i.e., not investigational agents) in the written interpretation. If there is an approved treatment for a variant but for a different tumor type, these are considered Tier 2 by AMP/ASCO/CAP guidelines, and a comment should be included in the variant-specific interpretation field. However, our policy is NOT to check Therapeutic for these variants or comment on the association in the Overall Interpretation field.\nThe OncoKB annotations typically provide high quality information for recurrent variants/variant types in key genes, but additional investigation is needed to interpret less well-characterized variants. The following resources may be helpful in those cases: Pubmed, Franklin, COSMIC, and CIViC.\nInterpretation for CNAs and Gene Fusions\nSimilar to the interpretations for individual small variants, interpretations for CNAs or Fusions included in the report should be entered here. These fields are not prepopulated with OncoKB annotations; however, the OncoKB web portal provides information for many of the recurrent CNAs and Fusions that are detected by GatewaySeq and may be a helpful resource when collecting data about these variants.\nOverall interpretation\nProvide a brief (2–3 sentence) summary of the entire case. The goal of the overall interpretation is to summarize the clinical significance of variants observed with an emphasis on implications for diagnosis, prognosis, and treatment. In particular, variants associated with FDA-approved or NCCN-recommended treatments, including TMB-H, should be stated here. Relevant negatives can also be included here, especially when the provider has indicated they are interested in the presence or absence of specific variants.\nFor cases with no variants that provide diagnostic, prognostic, or therapeutic information, we generally provide the following comment:\nNo variants associated with FDA-approved or NCCN compendium-listed treatments for patients with [tumor type] are identified. Overall quality control metrics are within normal limits.\n\n\nPDF\nAfter the QC review is complete and the case data and variant interpretations have been entered, selecting the PDF tab renders a preview of the final PDF report. Proofread this draft carefully; it is identical to the report that will appear in CoPath and Epic. Return to relevant tabs to make any necessary edits, and then return to the PDF tab to review any changes and save your work.\nDo not click Save JSON + ProcessPdf. This should only be clicked by the sign out pathologist. Clicking on this button finalizes the case and sends it to CoPath, preventing further changes without issuing an amended report.\nYou must click Save JSON to save your work (across all tabs). After clicking this, the next time the case is loaded from the Orders tab, the case will load with the updated information."
   },
   {
-    "objectID": "slides_myeloseq.html#measurable-residual-disease-mrd",
-    "href": "slides_myeloseq.html#measurable-residual-disease-mrd",
-    "title": "Introduction for Trainees",
-    "section": "Measurable Residual Disease (MRD)",
-    "text": "Measurable Residual Disease (MRD)\n\nMolecular MRD improves risk stratification after induction therapy and can be used for monitoring\n\n\nBlachly JS. 2022. PMID: 36453518."
+    "objectID": "intro_to_gatewayseq.html#references",
+    "href": "intro_to_gatewayseq.html#references",
+    "title": "GatewaySeq: Introduction for Trainees",
+    "section": "References",
+    "text": "References\n\nGeneral\n\nNational Comprehensive Cancer Network (NCCN) Guidelines\nOncoKB\n\n\n\nEndometrial Cancer\n\n\nLymphoma\n\nde Leval L et al. Genomic profiling for clinical decision making in lymphoid neoplasms. Blood. 2022 Nov 24;140(21):2193-2227. PMID: 36001803.\nNann D et al. Follicular lymphoma t(14;18)-negative is genetically a heterogeneous disease. Blood Adv. 2020 Nov 24;4(22):5652-5665. PMID: 33211828.\nSalaverria I et al. The clinical and molecular taxonomy of t(14;18)-negative follicular lymphomas. Blood Adv. 2023 Sep 26;7(18):5258-5271. PMID: 37561599.\nSánchez-Beato M et al. A genetic profiling guideline to support diagnosis and clinical management of lymphomas. Clin Transl Oncol. 2023 Sep 6. PMID: 37672206."
   },
   {
-    "objectID": "slides_myeloseq.html#measurable-residual-disease-mrd-1",
-    "href": "slides_myeloseq.html#measurable-residual-disease-mrd-1",
-    "title": "Introduction for Trainees",
-    "section": "Measurable Residual Disease (MRD)",
-    "text": "Measurable Residual Disease (MRD)\n\nMolecular MRD improves risk stratification after induction therapy and can be used for monitoring\n\n\nJongen-Lavrencic M. 2018. PMID: 29601269."
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "slides_myeloseq.html#spectrum-of-clonal-hematopoiesis",
-    "href": "slides_myeloseq.html#spectrum-of-clonal-hematopoiesis",
-    "title": "Introduction for Trainees",
-    "section": "Spectrum of Clonal Hematopoiesis",
-    "text": "Spectrum of Clonal Hematopoiesis\n\nDeZern AE. 2019. PMID: 31099654."
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Introduction to ChromoSeq for Trainees\nIntroduction to MyeloSeq for Trainees\nIntroduction to GatewaySeq for Trainees"
   },
   {
-    "objectID": "slides_myeloseq.html#myeloseq-target-genes-n-55",
-    "href": "slides_myeloseq.html#myeloseq-target-genes-n-55",
-    "title": "Introduction for Trainees",
-    "section": "MyeloSeq Target Genes (n = 55)",
-    "text": "MyeloSeq Target Genes (n = 55)\n\n\n\nASXL1\nBCOR\nBCORL1\nBRAF\nCALR\nCBL\nCD33\nCEBPA\nCHEK2\nCSF3R\nCUX1\nDDX41\nDNMT3A\nETNK1\n\n\n\nETV6\nEZH2\nFLT3\nGATA1\nGATA2\nGNB1\nIDH1\nIDH2\nJAK2\nKIT\nKMT2A\nKRAS\nMPL\nMYC\n\n\n\nNF1\nNOTCH1\nNPM1\nNRAS\nPHF6\nPIGA\nPPM1D\nPRPF8\nPTPN11\nRAD21\nRUNX1\nSETBP1\nSF3B1\nSMC1A\n\n\n\nSMC3\nSRSF2\nSTAG2\nSTAT3\nSTAT5B\nSUZ12\nTET2\nTP53\nU2AF1\nUBA1\nUBTF\nWT1\nZRSR2"
+    "objectID": "resources.html#clinical-service",
+    "href": "resources.html#clinical-service",
+    "title": "Resources",
+    "section": "",
+    "text": "Introduction to ChromoSeq for Trainees\nIntroduction to MyeloSeq for Trainees\nIntroduction to GatewaySeq for Trainees"
   },
   {
-    "objectID": "slides_myeloseq.html#massively-parallel-sequencing",
-    "href": "slides_myeloseq.html#massively-parallel-sequencing",
-    "title": "Introduction for Trainees",
-    "section": "Massively Parallel Sequencing",
-    "text": "Massively Parallel Sequencing\n\nShendure J. 2017. PMID: 29019985."
-  },
-  {
-    "objectID": "slides_myeloseq.html#idt-xgen-hybridization-capture",
-    "href": "slides_myeloseq.html#idt-xgen-hybridization-capture",
-    "title": "Introduction for Trainees",
-    "section": "IDT xGen Hybridization Capture",
-    "text": "IDT xGen Hybridization Capture\n\nidtdna.com"
-  },
-  {
-    "objectID": "slides_myeloseq.html#variant-allele-fraction-vaf",
-    "href": "slides_myeloseq.html#variant-allele-fraction-vaf",
-    "title": "Introduction for Trainees",
-    "section": "Variant Allele Fraction (VAF)",
-    "text": "Variant Allele Fraction (VAF)\n\n\n\nDuncavage EJ. 2022. PMID: 36130297."
-  },
-  {
-    "objectID": "slides_myeloseq.html#coverage-determines-sensitivity",
-    "href": "slides_myeloseq.html#coverage-determines-sensitivity",
-    "title": "Introduction for Trainees",
-    "section": "Coverage Determines Sensitivity",
-    "text": "Coverage Determines Sensitivity\n\nDuncavage EJ. 2022. PMID: 36130297."
-  },
-  {
-    "objectID": "slides_myeloseq.html#error-correction-improves-specificity",
-    "href": "slides_myeloseq.html#error-correction-improves-specificity",
-    "title": "Introduction for Trainees",
-    "section": "Error Correction Improves Specificity",
-    "text": "Error Correction Improves Specificity\n\n\n\nDuncavage EJ. 2022. PMID: 36130297."
-  },
-  {
-    "objectID": "slides_myeloseq.html#summary",
-    "href": "slides_myeloseq.html#summary",
-    "title": "Introduction for Trainees",
-    "section": "Summary",
-    "text": "Summary\n\n\nMyeloSeq is a targeted sequencing panel for patients with myeloid neoplasms\n55 genes and/or hotspots are sequenced at high depth (&gt;5,000x) to identify clinically relevant somatic variants with high sensitivity\nInitial study: diagnosis, risk stratification, and identification of variants associated with FDA-approved or NCCN compendium-listed therapies\nFollow-up study: measurable residual disease (MRD) assessment"
-  },
-  {
-    "objectID": "slides_myeloseq.html#resources",
-    "href": "slides_myeloseq.html#resources",
-    "title": "Introduction for Trainees",
-    "section": "Resources",
-    "text": "Resources\n\n\nGenomic profiling for clinical decision making in myeloid neoplasms and acute leukemia (PMID: 36130297)\nInternational Consensus Classification (PMID: 35767897)\nWHO Classification (PMID: 35732831)\nNCCN Guidelines: treatment by cancer type (AML, MDS, MPN)\nOncoKB\nFranklin\nUCSC Genome Browser\nMolecular in My Pocket reference cards (AMP)"
+    "objectID": "resources.html#slides",
+    "href": "resources.html#slides",
+    "title": "Resources",
+    "section": "Slides",
+    "text": "Slides\nMyeloSeq"
   }
 ]
