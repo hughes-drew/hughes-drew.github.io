@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/intro_to_myeloseq.html</loc>
-    <lastmod>2024-01-10T01:07:44.105Z</lastmod>
+    <lastmod>2025-12-31T02:45:54.238Z</lastmod>
   </url>
   <url>
     <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/intro_to_chromoseq.html</loc>
-    <lastmod>2024-01-10T01:07:43.271Z</lastmod>
+    <lastmod>2025-12-31T02:45:53.242Z</lastmod>
   </url>
   <url>
     <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/index.html</loc>
-    <lastmod>2024-01-10T01:07:42.152Z</lastmod>
+    <lastmod>2025-12-31T02:45:51.284Z</lastmod>
+  </url>
+  <url>
+    <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/myeloseq_slides.html</loc>
+    <lastmod>2025-12-31T02:45:50.324Z</lastmod>
   </url>
   <url>
     <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/intro_to_gatewayseq.html</loc>
-    <lastmod>2024-01-10T01:07:41.852Z</lastmod>
+    <lastmod>2025-12-31T02:45:50.962Z</lastmod>
   </url>
   <url>
     <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/publications.html</loc>
-    <lastmod>2024-01-10T01:07:42.800Z</lastmod>
+    <lastmod>2025-12-31T02:45:52.716Z</lastmod>
   </url>
   <url>
     <loc>ssh://git@github.com/hughes-drew/hughes-drew.github.io.git/resources.html</loc>
-    <lastmod>2024-01-10T01:07:43.486Z</lastmod>
+    <lastmod>2025-12-31T02:45:53.496Z</lastmod>
   </url>
 </urlset>

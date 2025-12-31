@@ -112,7 +112,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#quick-tips" id="toc-quick-tips" class="nav-link" data-scroll-target="#quick-tips">Quick Tips</a></li>
   <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#reporting-tool" id="toc-reporting-tool" class="nav-link" data-scroll-target="#reporting-tool">Reporting Tool</a></li>
+  <li><a href="#reporting-tool" id="toc-reporting-tool" class="nav-link" data-scroll-target="#reporting-tool">Reporting Tool</a>
+  <ul class="collapse">
   <li><a href="#case" id="toc-case" class="nav-link" data-scroll-target="#case">Case</a></li>
   <li><a href="#qc" id="toc-qc" class="nav-link" data-scroll-target="#qc">QC</a></li>
   <li><a href="#variants" id="toc-variants" class="nav-link" data-scroll-target="#variants">Variants</a></li>
@@ -121,6 +122,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tmbmsi" id="toc-tmbmsi" class="nav-link" data-scroll-target="#tmbmsi">TMB/MSI</a></li>
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
   <li><a href="#pdf" id="toc-pdf" class="nav-link" data-scroll-target="#pdf">PDF</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -146,13 +149,13 @@ ul.task-list li input[type="checkbox"] {
 
 <style>title {text-align: left}</style>
 <style>body {text-align: justify}</style>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<p><a href="https://pathologyservices.wustl.edu/items/gatewayseq-ngs-panel-with-interpretation/">GatewaySeq</a> is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks only) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.</p>
-<p>GatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). All new diagnoses of non-small cell lung cancer should have GatewaySeq ordered automatically by the pathologist.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><a href="https://pathologyservices.wustl.edu/items/gatewayseq-ngs-panel-with-interpretation/">GatewaySeq</a> is a tumor-only, DNA-only, targeted next-generation sequencing assay for the identification of clinically significant genetic alterations in solid tumors for diagnostic, prognostic, and therapeutic purposes. GatewaySeq is designed to evaluate key molecular biomarkers at diagnosis, relapse, or metastasis. The assay identifies small variants (single nucleotide variants, insertions, and deletions), copy number alterations (CNAs), and structural variants. GatewaySeq also evaluates microsatellite instability (MSI) and tumor mutational burden (TMB). The limit of detection (LOD) for GatewaySeq is 5% variant allele fraction (VAF), which depends on both the abundance of individual variants as well as tumor cellularity (minimum 5%). Formalin- or alcohol-fixed, paraffin-embedded surgical or cytology specimens (cell blocks or smear slides from fine-needle aspirations) are acceptable for testing. GatewaySeq was designed for the following tumor types: bone and soft tissue, brain, breast, gastrointestinal tract, genitourinary tract, gynecologic tract, hepatobiliary tract, lymphoma, lung, skin, thyroid.</p>
+<p>GatewaySeq can be ordered at the discretion of the provider (via Epic) or by the pathologist reviewing the surgical or cytology case (via Copath). GatewaySeq is ordered reflexively by the surgical pathologist for all new diagnoses of non-squamous, non-small cell lung cancer as well as metastatic breast cancer and gastrointestinal stromal tumors (GISTs).</p>
 </section>
-<section id="quick-tips" class="level3">
-<h3 class="anchored" data-anchor-id="quick-tips">Quick Tips</h3>
+<section id="quick-tips" class="level2">
+<h2 class="anchored" data-anchor-id="quick-tips">Quick Tips</h2>
 <ul>
 <li><strong>Read this entire document and refer to it while templating cases</strong></li>
 <li><strong>Review examples of previous cases, especially interpretations (this can be done using the GatewaySeq reporting tool)</strong></li>
@@ -161,9 +164,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>You must click <code>Save JSON</code> within the <code>PDF</code> tab to save your work; none of your changes are saved until you click this button; if you return to the <code>Orders</code> tab or close your browser window before clicking <code>Save JSON</code>, your changes will be lost</strong></li>
 </ul>
 </section>
-<section id="workflow" class="level3">
-<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
-<p>GatewaySeq is currently run once per week. Sequencing libraries are loaded on a NovaSeq X Plus on Friday, and data are typically available for analysis by Monday morning. Case assignments are distributed via email by the fellow on service on Friday. Trainees review the sequencing data and template clinical reports for sign out by 1400 on Tuesday afternoon. Briefly, trainees are expected to:</p>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>GatewaySeq is currently run twice per week. Sequencing libraries are loaded on a NovaSeq X Plus on Monday and Friday, and data are typically available for analysis Wednesday and Sunday morning. Case assignments are distributed via email by the molecular pathology coordinators on Friday. <strong>Trainees review the sequencing data and template clinical reports for sign out by 1300 on Monday and Wednesday</strong> afternoons. Briefly, trainees are expected to:</p>
 <ul>
 <li>Review the clinical history, especially the corresponding and historical pathology case(s), and incorporate those findings into the case interpretation</li>
 <li>Review any previous molecular testing performed on the same or related sample(s) (cytogenetics, external next-generation sequencing, etc.) and compare to GatewaySeq results</li>
@@ -176,8 +179,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Review the case with sign out faculty and make revisions as needed</li>
 </ul>
 </section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The complete set of files for each case are stored on the Research Infrastructure Services (RIS) cluster (ris.wustl.edu). The subset of files needed to interpret most cases are copied to the Department of Pathology server (pathfiles.wustl.edu). You do not need to routinely access these files directly to template cases; most of this information is available within the reporting tool. However, if you need to investigate individual variants or otherwise need access to data not included in the reporting tool, these files are available.</p>
 <p>To connect to the department server on a Windows computer, use the File Explorer application:</p>
 <ul>
@@ -201,10 +204,9 @@ ul.task-list li input[type="checkbox"] {
 <li><code>*report.txt</code>: case report json file</li>
 </ul>
 </section>
-<section id="reporting-tool" class="level3">
-<h3 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h3>
+<section id="reporting-tool" class="level2">
+<h2 class="anchored" data-anchor-id="reporting-tool">Reporting Tool</h2>
 <p>The <a href="https://mopath.wustl.edu/gatewayseq/">GatewayReporter</a> tool is a web-based JavaScript application used to prepare GatewaySeq clinical reports. This tool reads data from the .json files associated with each case. The landing page (<code>Orders</code> tab) presents a dashboard of pending and completed cases (completed cases can be viewed by de-selecting <code>Hide Final orders</code>). Clicking on an individual <code>orderid</code> in this table allows you to enter and review and/or edit a specific case. You can then work through all of the components of the case by moving left to right across the tabs in the reporting tool (<code>Case</code>, <code>QC</code>, <code>Variants</code>, <code>CNV</code>, <code>Fusions</code>, <code>TMB/MSI</code>, <code>Interpretation</code>, <code>PDF</code>, and <code>JSON</code>).</p>
-</section>
 <section id="case" class="level3">
 <h3 class="anchored" data-anchor-id="case">Case</h3>
 <p><strong>Patient Information</strong></p>
@@ -227,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="qc" class="level3">
 <h3 class="anchored" data-anchor-id="qc">QC</h3>
-<p>Cases with any of QC metrics outside of the reference range may require additional sequencing, preparation of new sequencing libraries, or submission of alternative specimens. <strong>Any cases that do not meet QC metrics should be brought to the attention of the sign out pathologist as soon as possible.</strong></p>
+<p>Cases with any of QC metrics outside of the reference range may require additional sequencing, preparation of new sequencing libraries, or submission of alternative specimens. <strong>Any cases that do not meet QC metrics should be brought to the attention of the sign out pathologist as soon as possible.</strong> In certain cases (e.g.&nbsp;no additional material), the pathologist may choose to sign out cases that do not meet QC metrics as exceptions and issue a limited report (SNVs and indels only).</p>
 <ul>
 <li><code>Mapping/Aligning Summary</code>: sequencing yield, read quality, alignment rate, and insert size</li>
 <li><code>Coverage Summary</code>: on-target rate, on-target coverage</li>
@@ -242,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="variants" class="level3">
 <h3 class="anchored" data-anchor-id="variants">Variants</h3>
 <p>Variant classification and interpretation are based on the AMP/ASCO/CAP guidelines for reporting sequence variants in cancer (<a href="https://pubmed.ncbi.nlm.nih.gov/27993330/">PMID: 27993330</a>). Tier 1 and 2 variants are classified as Significant and Tier 3 variants are classified as Variants of Uncertain Significance (VUS). Tier 4 variants are not reported.</p>
-<p>Variants that pass all internal QC filters are listed in the <code>PASS</code> table. Variants in genes with potential clinical significance for each tumor type (based on the data entered on the <code>Case</code> tab) are classified as Significant by default. Review these classifications to ensure that variants classified as Significant meet criteria for Tier 1 or 2 variants and that variants classified as VUS do not (use the checkboxes to update the classifications as needed). Note that our internal reporting policy is to classify Oncogenic/Likely Oncogenic variants as Tier 2. Additional information for each variant, including links to external databases, can be viewed by clicking on the <strong><code>⋁</code></strong> symbol. The majority of Tier 4 variants are automatically filtered from the report based on their frequency in the general population (filtering frequency &gt;0.1%); however, the annotation and comparison of multinucleotide variants to population databases in particular is error-prone and should be double-checked to ensure that Tier 4 variants aren’t mistakenly reported as VUS.</p>
+<p>Variants that pass all internal QC filters are listed in the <code>PASS</code> table. Variants in genes with potential clinical significance for each tumor type (based on the data entered on the <code>Case</code> tab) are classified as Significant by default. Review these classifications to ensure that variants classified as Significant meet criteria for Tier 1 or 2 variants and that variants classified as VUS do not (use the checkboxes to update the Diagnostic, Prognostic, Therapeutic, and Oncogenic/Likely Oncogenic classifications as needed). Note that our internal reporting policy is to classify Oncogenic/Likely Oncogenic variants as Tier 2. Additional information for each variant, including links to external databases, can be viewed by clicking on the <strong><code>⋁</code></strong> symbol. The majority of Tier 4 variants are automatically filtered from the report based on their frequency in the general population (filtering frequency &gt;0.1%); however, the annotation and comparison of multinucleotide variants to population databases in particular is error-prone and should be double-checked to ensure that Tier 4 variants aren’t mistakenly reported as VUS.</p>
 <p>Variants that are below the validated LOD (5% VAF) or that fail other quality filters are listed in the <code>Filtered</code> table. Variants included here should rarely be reported. The primary exceptions are 1) variants that represent a nucleotide change that is identical to a variant that was previously reported in the same patient by orthogonal testing and whose only <code>Filter</code> flag is <code>LowReads</code>, and 2) variants with strong clinical significance that are just below the LOD and whose only <code>Filter</code> flag is <code>LowReads</code> (e.g., an <em>EGFR</em> exon 21 variant at a VAF of 4.8% in a lung cancer specimen with low tumor cellularity).</p>
 </section>
 <section id="cnv" class="level3">
@@ -256,32 +258,56 @@ ul.task-list li input[type="checkbox"] {
 <section id="tmbmsi" class="level3">
 <h3 class="anchored" data-anchor-id="tmbmsi">TMB/MSI</h3>
 <p>Non-synonymous TMB (mutations/Mb) is reported with a categorization: low (0–10 mutations/Mb), intermediate (11–20 mutations/Mb), and high (&gt;20 mutations/Mb).</p>
-<p>Cases with <code>PercentageUnstableSites</code> &lt;20 are classified as microsatellite stable (MSS) and cases with <code>PercentageUnstableSites</code> ≥20 are classified as microsatellite instability high (MSI-H). If <code>ResultIsValid</code> is <code>false</code>, there is a technical problem with the MSI anlaysis and the sign out pathologist should be notified.</p>
+<p>Cases with <code>PercentageUnstableSites</code> &lt;20 are classified as microsatellite stable (MSS) and cases with <code>PercentageUnstableSites</code> ≥20 are classified as microsatellite instability high (MSI-H). If <code>ResultIsValid</code> is <code>false</code>, there is a technical problem with the MSI analysis and the sign out pathologist should be notified.</p>
 </section>
 <section id="interpretation" class="level3">
 <h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>Standardized comments and interpretations can be found in the Box folder under <code>GWSeq Trainee Resources/interpretation/interpretations.docx</code>.</p>
 <p><strong>Clinically Significant Genes with No Detected Variants</strong></p>
 <p>This section is automatically generated based on the tumor type and the variants selected as significant.</p>
 <p><strong>Interpretation for Clinically Significant Variants</strong></p>
 <p>Each variant that was selected as Significant in the <code>Variants</code> tab will appear here. At least one of the four significance categories should be selected (Diagnostic, Prognostic, Therapeutic, and/or Oncogenic/Likely Oncogenic).</p>
-<p>The reporting tool includes disease-specific interpretations from Memorial Sloan Kettering Cancer Center’s precision oncology knowledge base, <a href="https://www.oncokb.org/">OncoKB</a>, for each variant. Use the dropdowns to expand the tree under the <code>OncoKB</code> column and select the appropriate disease and click on the green text to pull comments into the <code>Interpretation</code> field. The comments entered for <code>geneSummary</code>, <code>variantSummary</code>, and <code>tumorTypeSummary</code> should generally be included in the interpretation and revised as needed. Please italicize all gene names by placing them inside asterisks (e.g., *EGFR*). Regarding variants with potential therapeutic significance, our current policy is to include FDA-approved and/or NCCN-compendium listed treatments (i.e., not investigational agents) in the written interpretation.</p>
+<p>The reporting tool includes disease-specific interpretations from Memorial Sloan Kettering Cancer Center’s precision oncology knowledge base, <a href="https://www.oncokb.org/">OncoKB</a>, for each variant. Use the dropdowns to expand the tree under the <code>OncoKB</code> column and select the appropriate disease and click on the green text to pull comments into the <code>Interpretation</code> field. The comments entered for <code>geneSummary</code>, <code>variantSummary</code>, and <code>tumorTypeSummary</code> should generally be included in the interpretation and revised as needed. Please italicize all gene names by placing them inside asterisks (e.g., *EGFR*). Regarding variants with potential therapeutic significance, our current policy is to include FDA-approved and/or NCCN-compendium listed treatments (i.e., not investigational agents) in the written interpretation. If there is an approved treatment for a variant but for a different tumor type, these are considered Tier 2 by AMP/ASCO/CAP guidelines, and a comment should be included in the variant-specific interpretation field. However, our policy is NOT to check <code>Therapeutic</code> for these variants or comment on the association in the <code>Overall Interpretation field</code>.</p>
 <p>The OncoKB annotations typically provide high quality information for recurrent variants/variant types in key genes, but additional investigation is needed to interpret less well-characterized variants. The following resources may be helpful in those cases: <a href="https://pubmed.ncbi.nlm.nih.gov">Pubmed</a>, <a href="https://franklin.genoox.com/clinical-db/home">Franklin</a>, <a href="https://cancer.sanger.ac.uk/cosmic">COSMIC</a>, and <a href="https://civicdb.org">CIViC</a>.</p>
-<p><strong>Interpretation for Included CNAs</strong> and <strong>Interpretation for Included Fusions</strong></p>
+<p><strong>Interpretation for CNAs and Gene Fusions</strong></p>
 <p>Similar to the interpretations for individual small variants, interpretations for CNAs or Fusions included in the report should be entered here. These fields are not prepopulated with OncoKB annotations; however, the <a href="https://www.oncokb.org/">OncoKB</a> web portal provides information for many of the recurrent CNAs and Fusions that are detected by GatewaySeq and may be a helpful resource when collecting data about these variants.</p>
 <p><strong>Overall interpretation</strong></p>
-<p>Provide a brief (2–3 sentence) summary of the entire case. The goal of the overall interpretation is to summarize the clinical significance of variants observed with an emphasis on implications for diagnosis, prognosis, and treatment. Relevant negatives can also be included here, especially when the provider has indicated they are interested in the presence or absence of specific variants.</p>
+<p>Provide a brief (2–3 sentence) summary of the entire case. The goal of the overall interpretation is to summarize the clinical significance of variants observed with an emphasis on implications for diagnosis, prognosis, and treatment. In particular, variants associated with FDA-approved or NCCN-recommended treatments, including TMB-H, should be stated here. Relevant negatives can also be included here, especially when the provider has indicated they are interested in the presence or absence of specific variants.</p>
 <p>For cases with no variants that provide diagnostic, prognostic, or therapeutic information, we generally provide the following comment:</p>
-<p><em>No variants associated with FDA-approved or NCCN-compendium listed treatments are identified. Overall quality control metrics are within normal limits.</em></p>
+<p><em>No variants associated with FDA-approved or NCCN compendium-listed treatments for patients with [tumor type] are identified. Overall quality control metrics are within normal limits.</em></p>
 </section>
 <section id="pdf" class="level3">
 <h3 class="anchored" data-anchor-id="pdf">PDF</h3>
 <p>After the QC review is complete and the case data and variant interpretations have been entered, selecting the <code>PDF</code> tab renders a preview of the final PDF report. Proofread this draft carefully; it is identical to the report that will appear in CoPath and Epic. Return to relevant tabs to make any necessary edits, and then return to the <code>PDF</code> tab to review any changes and save your work.</p>
 <p><strong>Do not click <code>Save JSON + ProcessPdf</code>. This should only be clicked by the sign out pathologist.</strong> Clicking on this button finalizes the case and sends it to CoPath, preventing further changes without issuing an amended report.</p>
 <p><strong>You must click <code>Save JSON</code> to save your work (across all tabs).</strong> After clicking this, the next time the case is loaded from the <code>Orders</code> tab, the case will load with the updated information.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="general" class="level4">
+<h4 class="anchored" data-anchor-id="general">General</h4>
+<ul>
+<li><a href="https://www.nccn.org">National Comprehensive Cancer Network (NCCN) Guidelines</a></li>
+<li><a href="https://www.oncokb.org">OncoKB</a></li>
+</ul>
+</section>
+<section id="endometrial-cancer" class="level4">
+<h4 class="anchored" data-anchor-id="endometrial-cancer">Endometrial Cancer</h4>
+</section>
+<section id="lymphoma" class="level4">
+<h4 class="anchored" data-anchor-id="lymphoma">Lymphoma</h4>
+<ul>
+<li><p>de Leval L <em>et al.</em> Genomic profiling for clinical decision making in lymphoid neoplasms. <em>Blood.</em> 2022 Nov 24;140(21):2193-2227. <a href="https://pubmed.ncbi.nlm.nih.gov/36001803/">PMID: 36001803</a>.</p></li>
+<li><p>Nann D <em>et al.</em> Follicular lymphoma t(14;18)-negative is genetically a heterogeneous disease. <em>Blood Adv.</em> 2020 Nov 24;4(22):5652-5665. <a href="https://pubmed.ncbi.nlm.nih.gov/33211828/">PMID: 33211828</a>.</p></li>
+<li><p>Salaverria I <em>et al.</em> The clinical and molecular taxonomy of t(14;18)-negative follicular lymphomas. <em>Blood Adv.</em> 2023 Sep 26;7(18):5258-5271. <a href="https://pubmed.ncbi.nlm.nih.gov/37561599/">PMID: 37561599</a>.</p></li>
+<li><p>Sánchez-Beato M <em>et al.</em> A genetic profiling guideline to support diagnosis and clinical management of lymphomas. <em>Clin Transl Oncol.</em> 2023 Sep 6. <a href="https://pubmed.ncbi.nlm.nih.gov/37672206/">PMID: 37672206</a>.</p></li>
+</ul>
 <p><br>
 </p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
